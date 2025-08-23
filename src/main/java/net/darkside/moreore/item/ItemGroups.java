@@ -18,6 +18,7 @@ public class ItemGroups {
             FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.CHUNK_OF_VENOM))
                     .displayName(Text.translatable("itemgroup.moreore.unknow"))
                     .entries((displayContext, entries) -> {
+                        entries.add(ModItems.DECAYED_DIAMOND);
                         entries.add(ModBlocks.VENOM_ORE);
                         entries.add(ModItems.CHUNK_OF_VENOM);
                         entries.add(ModItems.VENOM_PICKAXE);

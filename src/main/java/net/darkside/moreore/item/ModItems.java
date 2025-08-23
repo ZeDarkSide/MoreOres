@@ -19,7 +19,8 @@ public class ModItems {
     public static final Item CHUNK_OF_VENOM=registerItem
             ("chunk_of_venom", Item::new);
 
-
+    public static final Item DECAYED_DIAMOND=registerItem
+            ("decayed_diamond", Item::new);
 //Tools
 
 

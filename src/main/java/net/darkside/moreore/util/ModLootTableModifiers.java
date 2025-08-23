@@ -41,7 +41,7 @@ public final class ModLootTableModifiers {
                         registries,
                         /* silk drop: */ ItemEntry.builder(Items.DIAMOND_ORE), // if you want silk to drop vanilla diamond_ore instead, swap to ItemEntry.builder(Items.DIAMOND_ORE)
                         /* default drop: */ ItemEntry.builder(Items.DIAMOND),
-                        /* venom drop: */ ItemEntry.builder(ModItems.CHUNK_OF_VENOM)
+                        /* venom drop: */ ItemEntry.builder(ModItems.DECAYED_DIAMOND)
                 );
             }
             if (key.getValue().equals(DEEPSLATE_DIAMOND_ORE_ID)) {
@@ -49,7 +49,7 @@ public final class ModLootTableModifiers {
                         registries,
                         /* silk drop: */ ItemEntry.builder(Items.DEEPSLATE_DIAMOND_ORE), // or Items.DEEPSLATE_DIAMOND_ORE for pure vanilla silk behavior
                         /* default drop: */ ItemEntry.builder(Items.DIAMOND),
-                        /* venom drop: */ ItemEntry.builder(ModItems.CHUNK_OF_VENOM)
+                        /* venom drop: */ ItemEntry.builder(ModItems.DECAYED_DIAMOND)
                 );
             }
             return null;
@@ -86,7 +86,7 @@ public final class ModLootTableModifiers {
                 .apply(ExplosionDecayLootFunction.builder());
 
         venomDrop = venomDrop
-                .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0F, 2.0F)))
+                .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0F, 1.0F)))
                 .apply(ExplosionDecayLootFunction.builder());
 
         LootPool.Builder pool = LootPool.builder()

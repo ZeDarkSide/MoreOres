@@ -22,6 +22,7 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.CHUNK_OF_VENOM, Models.GENERATED);
+        itemModelGenerator.register(ModItems.DECAYED_DIAMOND, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.VENOM_PICKAXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.VENOM_SWORD, Models.HANDHELD);
