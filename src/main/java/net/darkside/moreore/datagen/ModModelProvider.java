@@ -16,6 +16,7 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.VENOM_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RUBY_ORE);
     }
 
     @Override

@@ -27,10 +27,13 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
         getOrCreateTagBuilder(ItemTags.SWORDS)
                 .add(ModItems.VENOM_SWORD);
+
         getOrCreateTagBuilder(ItemTags.AXES)
                 .add(ModItems.VENOM_AXE);
+
         getOrCreateTagBuilder(ItemTags.HOES)
                 .add(ModItems.VENOM_HOE);
+
         getOrCreateTagBuilder(ItemTags.SHOVELS)
                 .add(ModItems.VENOM_SHOVEL);
     }

@@ -25,6 +25,7 @@ public class ItemGroups {
                         entries.add(ModItems.VENOM_SHOVEL);
                         entries.add(ModItems.VENOM_HOE);
                         entries.add(ModItems.VENOM_SWORD);
+                        entries.add(ModBlocks.RUBY_ORE);
                     }).build());
 
 

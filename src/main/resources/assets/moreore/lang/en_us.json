@@ -1,8 +1,11 @@
 {
   "item.moreore.unknow_item": "Unknow Item",
   "item.moreore.chunk_of_venom": "Chunk of Venom",
+
+
   "item.moreore.unknow_block": "Unknow Block",
   "item.moreore.venom_ore": "Venom Ore",
+  "item.moreore.ruby_ore": "Ruby Ore",
 
   "item.moreore.venom_pickaxe": "Venom Pickaxe",
   "item.moreore.venom_sword": "Venom Sword",

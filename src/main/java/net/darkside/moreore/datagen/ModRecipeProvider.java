@@ -23,17 +23,22 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         super(output, registriesFuture);
     }
 
+    // <editor-fold desc="a fake region">
+    // </editor-fold>
+
     @Override
     protected RecipeGenerator getRecipeGenerator(RegistryWrapper.WrapperLookup wrapperLookup, RecipeExporter recipeExporter) {
         return new RecipeGenerator(wrapperLookup, recipeExporter) {
             @Override
             public void generate() {
+
+                // <editor-fold desc="Venom Crafting">
                 List<ItemConvertible> VENOM = List.of( ModBlocks.VENOM_ORE);
 
                 offerSmelting(VENOM, RecipeCategory.MISC, ModItems.CHUNK_OF_VENOM, 0.25f, 200, "venom_ores");
 
 
-                //tool crafting
+
                 createShaped(RecipeCategory.MISC, ModItems.VENOM_PICKAXE)
                         .pattern("RRR")
                         .pattern(" S ")
@@ -79,8 +84,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .input('S', Items.STICK)
                         .criterion(hasItem(ModItems.CHUNK_OF_VENOM), conditionsFromItem(ModItems.CHUNK_OF_VENOM))
                         .offerTo(exporter);
+// </editor-fold>
 
 
+
+
+
+
+                // <editor-fold desc="Copy paste stuff>
                /* createShaped(RecipeCategory.MISC, ModBlocks.RAW_PINK_GARNET_BLOCK)
                         .pattern("RRR")
                         .pattern("RRR")
@@ -93,7 +104,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .input(ModBlocks.RAW_PINK_GARNET_BLOCK)
                         .criterion(hasItem(ModBlocks.RAW_PINK_GARNET_BLOCK), conditionsFromItem(ModBlocks.RAW_PINK_GARNET_BLOCK))
                         .offerTo(exporter);*/
-
+// </editor-fold>
             }
         };
     }

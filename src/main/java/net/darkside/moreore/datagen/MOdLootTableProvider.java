@@ -31,11 +31,8 @@ public class MOdLootTableProvider extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
-        addDrop(ModBlocks.VENOM_ORE,
-                CustomOreDrops
-                        (ModBlocks.VENOM_ORE,
-                                ModItems.CHUNK_OF_VENOM, 2,4));
-
+        addDrop(ModBlocks.VENOM_ORE, CustomOreDrops(ModBlocks.VENOM_ORE, ModItems.CHUNK_OF_VENOM, 2,4));
+        addDrop(ModBlocks.RUBY_ORE, CustomOreDrops(ModBlocks.VENOM_ORE, ModItems.CHUNK_OF_VENOM, 2,4)); //temp
 
     }
 
