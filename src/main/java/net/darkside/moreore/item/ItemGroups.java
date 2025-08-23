@@ -21,6 +21,10 @@ public class ItemGroups {
                         entries.add(ModBlocks.VENOM_ORE);
                         entries.add(ModItems.CHUNK_OF_VENOM);
                         entries.add(ModItems.VENOM_PICKAXE);
+                        entries.add(ModItems.VENOM_AXE);
+                        entries.add(ModItems.VENOM_SHOVEL);
+                        entries.add(ModItems.VENOM_HOE);
+                        entries.add(ModItems.VENOM_SWORD);
                     }).build());
 
 
