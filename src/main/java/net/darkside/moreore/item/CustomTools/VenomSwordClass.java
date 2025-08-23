@@ -34,7 +34,7 @@ public class VenomSwordClass extends SwordItem {
             }
         }
 
-        // Let vanilla continue its normal flow (including calling postDamageEntity which handles durability)
+
         return super.postHit(stack, target, attacker);
     }
 }
