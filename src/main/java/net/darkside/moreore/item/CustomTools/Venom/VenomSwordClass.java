@@ -1,17 +1,23 @@
-package net.darkside.moreore.item.CustomTools;
+package net.darkside.moreore.item.CustomTools.Venom;
 
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
+import net.minecraft.item.tooltip.TooltipType;
+import net.minecraft.text.Text;
+import net.minecraft.util.Formatting;
 import net.minecraft.world.World;
+
+import java.util.List;
 
 public class VenomSwordClass extends SwordItem {
     private static final int POISON_DURATION = 100;
-    private static final int POISON_AMPLIFIER = 1;
+    private static final int POISON_AMPLIFIER = 3;
 
     private static final boolean EXCLUDE_PLAYERS = false;
 
@@ -37,4 +43,13 @@ public class VenomSwordClass extends SwordItem {
 
         return super.postHit(stack, target, attacker);
     }
+
+    @Override
+    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType type) {
+        int seconds = POISON_DURATION / 20;
+        tooltip.add(Text.translatable("tooltip.moreore.venom_tool.line1").formatted(Formatting.GREEN));
+        tooltip.add(Text.translatable("tooltip.moreore.venom_tool.line2", POISON_AMPLIFIER + 1, seconds)
+                .formatted(Formatting.DARK_GREEN));
+    }
+
 }

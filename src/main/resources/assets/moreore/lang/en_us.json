@@ -10,7 +10,14 @@
   "item.moreore.venom_axe": "Venom Axe",
   "item.moreore.venom_shovel": "Venom Shovel",
 
-  "itemgroup.moreore.unknow": "Unknow"
+
+
+
+  "tooltip.moreore.venom_tool.line1": "Poisons on hit",
+  "tooltip.moreore.venom_tool.line2": "Poison %s • %ss",
+
+
+  "itemgroup.moreore.unknow": "More ore"
 }
 
 
