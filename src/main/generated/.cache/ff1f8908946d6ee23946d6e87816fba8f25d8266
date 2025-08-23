@@ -1,0 +1,5 @@
+// 1.21.4	-999999999-01-01T00:00:00	Ores glory/moreores
+d93e0693dfb26a7a46e4f538c3e91c1b570e6c6c data/moreore/advancement/recipes/misc/chunk_of_venom_from_smelting_venom_ore.json
+14a9ad81eb377d85d0ae3193f89be7bff9481a02 data/moreore/advancement/recipes/misc/venom_pickaxe.json
+efb804ba7b9087e85c64439b1a3823c13609939c data/moreore/recipe/chunk_of_venom_from_smelting_venom_ore.json
+278ee5ca0a30f8ac5fcf66809cf508e531db535a data/moreore/recipe/venom_pickaxe.json

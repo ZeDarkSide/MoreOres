@@ -1,0 +1,9 @@
+// 1.21.4	-999999999-01-01T00:00:00	Ores glory/Model Definitions
+3f16eb95504b47ea855abd4741cc21686245cf67 assets/moreore/blockstates/venom_ore.json
+12f5f6885093b547957e58da05b5e97d91d4eb22 assets/moreore/items/chunk_of_venom.json
+8bd15f2a4f23145aa5f6e7fd277ee4d758792870 assets/moreore/items/unknow_block.json
+5bb88511cf2f78b9626de815241e0b903b388e88 assets/moreore/items/venom_ore.json
+e11a8195e174d9ee697cc9a596b14af2ef8d7052 assets/moreore/items/venom_pickaxe.json
+09d43130e6fa82eea87139e02484de63d736298e assets/moreore/models/block/venom_ore.json
+889655eab8b504b790e797fb20b8e866acdf2687 assets/moreore/models/item/chunk_of_venom.json
+fec88a2681f5dab4f8a8a22c702247d6458ddf2d assets/moreore/models/item/venom_pickaxe.json
