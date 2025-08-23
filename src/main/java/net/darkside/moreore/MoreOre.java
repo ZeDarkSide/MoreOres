@@ -3,6 +3,7 @@ package net.darkside.moreore;
 import net.darkside.moreore.block.ModBlocks;
 import net.darkside.moreore.item.ItemGroups;
 import net.darkside.moreore.item.ModItems;
+import net.darkside.moreore.util.ModLootTableModifiers;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -22,6 +23,7 @@ public class MoreOre implements ModInitializer {
 		LOGGER.info("Hello world!");
         ModItems.registerModItems();
         ModBlocks.registerModBlocks();
+        ModLootTableModifiers.register();
 	}
 
 

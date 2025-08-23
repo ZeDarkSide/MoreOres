@@ -18,7 +18,8 @@ public class ModTags {
 
     public static class Items {
         public static final TagKey<Item> TRANSFORMABLE_ITEMS = createTag("transformable_items");
-        public static final TagKey<Item> VENOM_REPAIR = createTag("venom_repair");
+        public static final TagKey<Item> VENOM_REPAIR        = createTag("venom_repair");
+        public static final TagKey<Item> VENOM_TOOLS         = createTag("venom_tools");
         private static TagKey<Item> createTag(String name) {
             return TagKey.of(RegistryKeys.ITEM, Identifier.of(MoreOre.MOD_ID, name));
         }

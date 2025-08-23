@@ -69,6 +69,7 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
                 .criterion("has_venom_pickaxe",
                         InventoryChangedCriterion.Conditions.items(ModItems.VENOM_PICKAXE))
                 .build(consumer, id("venom_pickaxe"));
+
     }
 
     private static String id(String path) {

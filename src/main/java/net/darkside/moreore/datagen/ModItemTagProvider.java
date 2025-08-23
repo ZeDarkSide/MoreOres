@@ -22,6 +22,12 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(ModTags.Items.TRANSFORMABLE_ITEMS)
                 .add(ModItems.CHUNK_OF_VENOM);
 
+        getOrCreateTagBuilder(ModTags.Items.VENOM_TOOLS)
+                .add(ModItems.VENOM_SHOVEL)
+                .add(ModItems.VENOM_HOE)
+                .add(ModItems.VENOM_AXE)
+                .add(ModItems.VENOM_SWORD)
+                .add(ModItems.VENOM_PICKAXE);
         getOrCreateTagBuilder(ItemTags.PICKAXES)
                 .add(ModItems.VENOM_PICKAXE);
 
