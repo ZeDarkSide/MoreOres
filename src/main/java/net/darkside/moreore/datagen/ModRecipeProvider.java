@@ -43,6 +43,43 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.CHUNK_OF_VENOM), conditionsFromItem(ModItems.CHUNK_OF_VENOM))
                         .offerTo(exporter);
 
+                createShaped(RecipeCategory.MISC, ModItems.VENOM_SWORD)
+                        .pattern(" R ")
+                        .pattern(" R ")
+                        .pattern(" S ")
+                        .input('R', ModItems.CHUNK_OF_VENOM)
+                        .input('S', Items.STICK)
+                        .criterion(hasItem(ModItems.CHUNK_OF_VENOM), conditionsFromItem(ModItems.CHUNK_OF_VENOM))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModItems.VENOM_HOE)
+                        .pattern("RR ")
+                        .pattern(" S ")
+                        .pattern(" S ")
+                        .input('R', ModItems.CHUNK_OF_VENOM)
+                        .input('S', Items.STICK)
+                        .criterion(hasItem(ModItems.CHUNK_OF_VENOM), conditionsFromItem(ModItems.CHUNK_OF_VENOM))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModItems.VENOM_AXE)
+                        .pattern(" RR")
+                        .pattern(" SR")
+                        .pattern(" S ")
+                        .input('R', ModItems.CHUNK_OF_VENOM)
+                        .input('S', Items.STICK)
+                        .criterion(hasItem(ModItems.CHUNK_OF_VENOM), conditionsFromItem(ModItems.CHUNK_OF_VENOM))
+                        .offerTo(exporter);
+
+
+                createShaped(RecipeCategory.MISC, ModItems.VENOM_SHOVEL)
+                        .pattern(" R ")
+                        .pattern(" S ")
+                        .pattern(" S ")
+                        .input('R', ModItems.CHUNK_OF_VENOM)
+                        .input('S', Items.STICK)
+                        .criterion(hasItem(ModItems.CHUNK_OF_VENOM), conditionsFromItem(ModItems.CHUNK_OF_VENOM))
+                        .offerTo(exporter);
+
 
                /* createShaped(RecipeCategory.MISC, ModBlocks.RAW_PINK_GARNET_BLOCK)
                         .pattern("RRR")

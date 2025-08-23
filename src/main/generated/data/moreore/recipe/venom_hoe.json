@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": "moreore:chunk_of_venom",
+    "S": "minecraft:stick"
+  },
+  "pattern": [
+    "RR ",
+    " S ",
+    " S "
+  ],
+  "result": {
+    "count": 1,
+    "id": "moreore:venom_hoe"
+  }
+}

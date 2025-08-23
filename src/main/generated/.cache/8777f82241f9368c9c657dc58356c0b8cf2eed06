@@ -1,3 +1,7 @@
 // 1.21.4	-999999999-01-01T00:00:00	Ores glory/Tags for minecraft:item
+61aa7b93621825d6ac6d3f62183bcfe2af91d249 data/minecraft/tags/item/axes.json
+aaf181680be8fe2a21825ae37754b65d939b8078 data/minecraft/tags/item/hoes.json
 8d045101e49be5cb3334402eceab13a1756cded6 data/minecraft/tags/item/pickaxes.json
+c9c018b95c2396eb0895a23a110af38a05b6fc6a data/minecraft/tags/item/shovels.json
+42baea058f5f63a1d621354fe6058faaec44a8de data/minecraft/tags/item/swords.json
 805b38c1d91830764da04078365b253fbc4e7911 data/moreore/tags/item/transformable_items.json

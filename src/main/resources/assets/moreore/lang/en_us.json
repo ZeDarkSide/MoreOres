@@ -5,7 +5,10 @@
   "item.moreore.venom_ore": "Venom Ore",
 
   "item.moreore.venom_pickaxe": "Venom Pickaxe",
-
+  "item.moreore.venom_sword": "Venom Sword",
+  "item.moreore.venom_hoe": "Venom Hoe",
+  "item.moreore.venom_axe": "Venom Axe",
+  "item.moreore.venom_shovel": "Venom Shovel",
 
   "itemgroup.moreore.unknow": "Unknow"
 }

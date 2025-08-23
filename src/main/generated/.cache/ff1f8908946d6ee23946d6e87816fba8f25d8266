@@ -1,5 +1,13 @@
 // 1.21.4	-999999999-01-01T00:00:00	Ores glory/moreores
 d93e0693dfb26a7a46e4f538c3e91c1b570e6c6c data/moreore/advancement/recipes/misc/chunk_of_venom_from_smelting_venom_ore.json
+1761454a77be0155cfec3ec73dfe29210160aa35 data/moreore/advancement/recipes/misc/venom_axe.json
+60bf9ab30641da362f75c716c8f620c5b9d230a7 data/moreore/advancement/recipes/misc/venom_hoe.json
 14a9ad81eb377d85d0ae3193f89be7bff9481a02 data/moreore/advancement/recipes/misc/venom_pickaxe.json
+d6d2dcb79f503909a32eaf439792b4e9130b558e data/moreore/advancement/recipes/misc/venom_shovel.json
+8556c83e61b8e9c05fbd5849f652227703277aa1 data/moreore/advancement/recipes/misc/venom_sword.json
 efb804ba7b9087e85c64439b1a3823c13609939c data/moreore/recipe/chunk_of_venom_from_smelting_venom_ore.json
+f1f64e19eb23d3c03759eb33823c00ecddf87f2c data/moreore/recipe/venom_axe.json
+a94d2e480189d4ff21dfbe6caff7d21c9e13cd1c data/moreore/recipe/venom_hoe.json
 278ee5ca0a30f8ac5fcf66809cf508e531db535a data/moreore/recipe/venom_pickaxe.json
+a3c5a81ecd6ceb2838f3f5cf8619181e9aefa4ae data/moreore/recipe/venom_shovel.json
+e4d7e525b62e4ac425eba524108bd6751a145c7a data/moreore/recipe/venom_sword.json
