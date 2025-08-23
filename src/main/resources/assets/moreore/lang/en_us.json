@@ -20,7 +20,18 @@
   "tooltip.moreore.venom_tool.line2": "Poison %s • %ss",
 
 
-  "itemgroup.moreore.unknow": "More ore"
+  "itemgroup.moreore.unknow": "More ore",
+
+
+
+  "advancement.moreore.root.title": "More Ores",
+  "advancement.moreore.root.desc": "Welcome to the More Ores progression.",
+  "advancement.moreore.venom_ore.title": "Toxic Discovery",
+  "advancement.moreore.venom_ore.desc": "Mine a vein of Venom Ore. Careful where you swing.",
+  "advancement.moreore.venom_sword.title": "Fang of the Deep",
+  "advancement.moreore.venom_sword.desc": "Obtain a Venom Sword.",
+  "advancement.moreore.venom_pick.title": "Venomous Precision",
+  "advancement.moreore.venom_pick.desc": "Obtain a Venom Pickaxe."
 }
 
 

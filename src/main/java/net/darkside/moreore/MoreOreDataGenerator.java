@@ -14,5 +14,6 @@ public class MoreOreDataGenerator implements DataGeneratorEntrypoint {
         pack.addProvider(MOdLootTableProvider::new);
         pack.addProvider(ModModelProvider::new);
         pack.addProvider(ModRecipeProvider::new);
+        pack.addProvider(ModAdvancementProvider::new);
 	}
 }
