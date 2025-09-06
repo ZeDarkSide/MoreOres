@@ -1,6 +1,7 @@
 package net.darkside.moreore;
 
 import net.darkside.moreore.block.ModBlocks;
+import net.darkside.moreore.effect.ModEffect;
 import net.darkside.moreore.item.ItemGroups;
 import net.darkside.moreore.item.ModItems;
 import net.darkside.moreore.util.ModLootTableModifiers;
@@ -24,6 +25,7 @@ public class MoreOre implements ModInitializer {
         ModItems.registerModItems();
         ModBlocks.registerModBlocks();
         ModLootTableModifiers.register();
+        ModEffect.registerEffects();
 	}
 
 

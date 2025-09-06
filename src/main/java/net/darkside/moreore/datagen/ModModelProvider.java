@@ -17,17 +17,26 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.VENOM_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RUBY_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SHADOW_ORE);
     }
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.CHUNK_OF_VENOM, Models.GENERATED);
         itemModelGenerator.register(ModItems.DECAYED_DIAMOND, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SHADOW_SCRAP, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SHADOW_INGOT, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.VENOM_PICKAXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.VENOM_SWORD, Models.HANDHELD);
         itemModelGenerator.register(ModItems.VENOM_AXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.VENOM_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.VENOM_HOE, Models.HANDHELD);
+
+        itemModelGenerator.register(ModItems.SHADOW_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.SHADOW_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.SHADOW_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.SHADOW_HOE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.SHADOW_SWORD, Models.HANDHELD);
     }
 }

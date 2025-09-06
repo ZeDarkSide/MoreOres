@@ -1,18 +1,27 @@
 {
   "item.moreore.unknow_item": "Unknow Item",
   "item.moreore.chunk_of_venom": "Chunk of Venom",
-
+  "item.moreore.decayed_diamond": "Decayed Diamond",
+  "item.moreore.shadow_scrap": "Shadow Scrap",
+  "item.moreore.shadow_ingot": "Shadow Ingot",
 
   "item.moreore.unknow_block": "Unknow Block",
   "item.moreore.venom_ore": "Venom Ore",
   "item.moreore.ruby_ore": "Ruby Ore",
-  "item.moreore.decayed_diamond": "Decayed Diamond",
+  "item.moreore.shadow_ore": "Shadow Ore",
+
 
   "item.moreore.venom_pickaxe": "Venom Pickaxe",
   "item.moreore.venom_sword": "Venom Sword",
   "item.moreore.venom_hoe": "Venom Hoe",
   "item.moreore.venom_axe": "Venom Axe",
   "item.moreore.venom_shovel": "Venom Shovel",
+
+  "item.moreore.shadow_pickaxe": "Shadow Pickaxe",
+  "item.moreore.shadow_axe": "Shadow Axe",
+  "item.moreore.shadow_shovel": "Shadow Shovel",
+  "item.moreore.shadow_hoe": "Shadow Hoe",
+  "item.moreore.shadow_sword": "Shadow Sword",
 
 
 
@@ -32,7 +41,11 @@
   "advancement.moreore.venom_sword.title": "Fang of the Deep",
   "advancement.moreore.venom_sword.desc": "Obtain a Venom Sword.",
   "advancement.moreore.venom_pick.title": "Venomous Precision",
-  "advancement.moreore.venom_pick.desc": "Obtain a Venom Pickaxe."
-}
+  "advancement.moreore.venom_pick.desc": "Obtain a Venom Pickaxe.",
 
+
+
+  "effect.moreore.shadow_tool": "Shadow Tool"
+
+}
 

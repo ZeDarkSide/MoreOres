@@ -9,6 +9,9 @@ public class ModToolMaterials {
     public static ToolMaterial VENOM_TOOLS = new ToolMaterial(ModTags.Blocks.WRONG_NEEDS_VENOM_TOOLS,
             250, 5.0F, 4.0F, 22, ModTags.Items.VENOM_REPAIR);
 
+    public static ToolMaterial SHADOW_TOOLS = new ToolMaterial(ModTags.Blocks.WRONG_NEEDS_VENOM_TOOLS,
+            1650, 7.0F, 4.0F, 8, ModTags.Items.SHADOW_REPAIR);
+
 }
 
 

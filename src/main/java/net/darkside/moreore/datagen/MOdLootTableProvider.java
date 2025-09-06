@@ -33,7 +33,7 @@ public class MOdLootTableProvider extends FabricBlockLootTableProvider {
     public void generate() {
         addDrop(ModBlocks.VENOM_ORE, CustomOreDrops(ModBlocks.VENOM_ORE, ModItems.CHUNK_OF_VENOM, 1,3));
         addDrop(ModBlocks.RUBY_ORE, CustomOreDrops(ModBlocks.VENOM_ORE, ModItems.CHUNK_OF_VENOM, 2,4)); //temp
-
+        addDrop(ModBlocks.SHADOW_ORE, ModBlocks.SHADOW_ORE);
     }
 
     public LootTable.Builder CustomOreDrops(Block drop, Item item, float minDrops, float maxDrops) {

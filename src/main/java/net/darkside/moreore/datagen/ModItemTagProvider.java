@@ -20,7 +20,9 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         getOrCreateTagBuilder(ModTags.Items.TRANSFORMABLE_ITEMS)
-                .add(ModItems.CHUNK_OF_VENOM);
+                .add(ModItems.CHUNK_OF_VENOM)
+                .add(ModItems.SHADOW_SCRAP)
+                .add(ModItems.SHADOW_INGOT);
 
         getOrCreateTagBuilder(ModTags.Items.VENOM_TOOLS)
                 .add(ModItems.VENOM_SHOVEL)
@@ -28,19 +30,30 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.VENOM_AXE)
                 .add(ModItems.VENOM_SWORD)
                 .add(ModItems.VENOM_PICKAXE);
+        getOrCreateTagBuilder(ModTags.Items.SHADOW_TOOLS)
+                .add(ModItems.SHADOW_SHOVEL)
+                .add(ModItems.SHADOW_HOE)
+                .add(ModItems.SHADOW_AXE)
+                .add(ModItems.SHADOW_SWORD)
+                .add(ModItems.SHADOW_PICKAXE);
         getOrCreateTagBuilder(ItemTags.PICKAXES)
-                .add(ModItems.VENOM_PICKAXE);
+                .add(ModItems.VENOM_PICKAXE)
+                .add(ModItems.SHADOW_PICKAXE);
 
         getOrCreateTagBuilder(ItemTags.SWORDS)
-                .add(ModItems.VENOM_SWORD);
+                .add(ModItems.VENOM_SWORD)
+                .add(ModItems.SHADOW_SWORD);
 
         getOrCreateTagBuilder(ItemTags.AXES)
-                .add(ModItems.VENOM_AXE);
+                .add(ModItems.VENOM_AXE)
+                .add(ModItems.SHADOW_AXE);
 
         getOrCreateTagBuilder(ItemTags.HOES)
-                .add(ModItems.VENOM_HOE);
+                .add(ModItems.VENOM_HOE)
+                .add(ModItems.SHADOW_HOE);
 
         getOrCreateTagBuilder(ItemTags.SHOVELS)
-                .add(ModItems.VENOM_SHOVEL);
+                .add(ModItems.VENOM_SHOVEL)
+                .add(ModItems.SHADOW_SHOVEL);
     }
 }

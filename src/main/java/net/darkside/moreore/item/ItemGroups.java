@@ -26,7 +26,14 @@ public class ItemGroups {
                         entries.add(ModItems.VENOM_SHOVEL);
                         entries.add(ModItems.VENOM_HOE);
                         entries.add(ModItems.VENOM_SWORD);
-                        entries.add(ModBlocks.RUBY_ORE);
+                        entries.add(ModBlocks.SHADOW_ORE);
+                        entries.add(ModItems.SHADOW_SCRAP);
+                        entries.add(ModItems.SHADOW_INGOT);
+                        entries.add(ModItems.SHADOW_PICKAXE);
+                        entries.add(ModItems.SHADOW_AXE);
+                        entries.add(ModItems.SHADOW_SHOVEL);
+                        entries.add(ModItems.SHADOW_HOE);
+                        entries.add(ModItems.SHADOW_SWORD);
                     }).build());
 
 

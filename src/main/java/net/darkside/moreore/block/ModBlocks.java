@@ -41,6 +41,12 @@ public class ModBlocks {
                     .requiresTool()
                     .sounds(BlockSoundGroup.STONE));
 
+    public static final Block SHADOW_ORE = registerBlock("shadow_ore",
+            AbstractBlock.Settings.create()
+                    .strength(5f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.STONE));
+
     private static Block registerBlock(String name, AbstractBlock.Settings settings) {
         return registerBlock(name, key -> new Block(settings.registryKey(key)));
     }

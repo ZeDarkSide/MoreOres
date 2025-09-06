@@ -86,10 +86,63 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
 // </editor-fold>
 
+                // <editor-fold desc="Shadow Crafting">
+                List<ItemConvertible> SHADOW = List.of( ModBlocks.SHADOW_ORE);
+                offerSmelting(SHADOW, RecipeCategory.MISC, ModItems.SHADOW_SCRAP, 0.45f, 400, "shadow_ores");
+                createShaped(RecipeCategory.MISC, ModItems.SHADOW_PICKAXE)
+                        .pattern("RRR")
+                        .pattern(" S ")
+                        .pattern(" S ")
+                        .input('R', ModItems.SHADOW_INGOT)
+                        .input('S', Items.STICK)
+                        .criterion(hasItem(ModItems.SHADOW_INGOT), conditionsFromItem(ModItems.SHADOW_INGOT))
+                        .offerTo(exporter);
 
+                createShaped(RecipeCategory.MISC, ModItems.SHADOW_SWORD)
+                        .pattern(" R ")
+                        .pattern(" R ")
+                        .pattern(" S ")
+                        .input('R', ModItems.SHADOW_INGOT)
+                        .input('S', Items.STICK)
+                        .criterion(hasItem(ModItems.SHADOW_INGOT), conditionsFromItem(ModItems.SHADOW_INGOT))
+                        .offerTo(exporter);
 
+                createShaped(RecipeCategory.MISC, ModItems.SHADOW_HOE)
+                        .pattern("RR ")
+                        .pattern(" S ")
+                        .pattern(" S ")
+                        .input('R', ModItems.SHADOW_INGOT)
+                        .input('S', Items.STICK)
+                        .criterion(hasItem(ModItems.SHADOW_INGOT), conditionsFromItem(ModItems.SHADOW_INGOT))
+                        .offerTo(exporter);
 
+                createShaped(RecipeCategory.MISC, ModItems.SHADOW_AXE)
+                        .pattern(" RR")
+                        .pattern(" SR")
+                        .pattern(" S ")
+                        .input('R', ModItems.SHADOW_INGOT)
+                        .input('S', Items.STICK)
+                        .criterion(hasItem(ModItems.SHADOW_INGOT), conditionsFromItem(ModItems.SHADOW_INGOT))
+                        .offerTo(exporter);
 
+                createShaped(RecipeCategory.MISC, ModItems.SHADOW_SHOVEL)
+                        .pattern(" R ")
+                        .pattern(" S ")
+                        .pattern(" S ")
+                        .input('R', ModItems.SHADOW_INGOT)
+                        .input('S', Items.STICK)
+                        .criterion(hasItem(ModItems.SHADOW_INGOT), conditionsFromItem(ModItems.SHADOW_INGOT))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModItems.SHADOW_INGOT)
+                        .pattern("DDD")
+                        .pattern(" S ")
+                        .pattern("DSD")
+                        .input('S', ModItems.SHADOW_SCRAP)
+                        .input('D', Items.DIAMOND)
+                        .criterion(hasItem(ModItems.SHADOW_INGOT), conditionsFromItem(ModItems.SHADOW_INGOT))
+                        .offerTo(exporter);
+                // </editor-fold>
 
                 // <editor-fold desc="Copy paste stuff>
                /* createShaped(RecipeCategory.MISC, ModBlocks.RAW_PINK_GARNET_BLOCK)

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 400,
+  "experience": 0.45,
+  "group": "shadow_ores",
+  "ingredient": "moreore:shadow_ore",
+  "result": {
+    "id": "moreore:shadow_scrap"
+  }
+}

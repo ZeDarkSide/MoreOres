@@ -1,6 +1,11 @@
 package net.darkside.moreore.item;
 
 import net.darkside.moreore.MoreOre;
+import net.darkside.moreore.item.CustomTools.ShadowPickaxe;
+import net.darkside.moreore.item.CustomTools.ShadowAxe;
+import net.darkside.moreore.item.CustomTools.ShadowShovel;
+import net.darkside.moreore.item.CustomTools.ShadowHoe;
+import net.darkside.moreore.item.CustomTools.ShadowSword;
 import net.darkside.moreore.item.CustomTools.Venom.*;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
@@ -21,6 +26,11 @@ public class ModItems {
 
     public static final Item DECAYED_DIAMOND=registerItem
             ("decayed_diamond", Item::new);
+
+    public static final Item SHADOW_SCRAP =registerItem
+            ("shadow_scrap", Item::new);
+    public static final Item SHADOW_INGOT =registerItem
+            ("shadow_ingot", Item::new);
 //Tools
 
 
@@ -81,6 +91,19 @@ GOLD
     public static final Item VENOM_SHOVEL = registerItem(
             "venom_shovel", setting -> new VenomShovel(ModToolMaterials.VENOM_TOOLS, -1, -2.8f, setting));
 
+
+
+    public static final Item SHADOW_PICKAXE = registerItem("shadow_pickaxe",
+            setting -> new ShadowPickaxe(ModToolMaterials.SHADOW_TOOLS, -2, -2.5f, setting));
+
+    public static final Item SHADOW_AXE = registerItem(
+            "shadow_axe", setting -> new ShadowAxe(ModToolMaterials.SHADOW_TOOLS, 1.5f, -3.0f, setting));
+    public static final Item SHADOW_SHOVEL = registerItem(
+            "shadow_shovel", setting -> new ShadowShovel(ModToolMaterials.SHADOW_TOOLS, -1f, -2.8f, setting));
+    public static final Item SHADOW_HOE = registerItem(
+            "shadow_hoe", setting -> new ShadowHoe(ModToolMaterials.SHADOW_TOOLS, -4, -2.8f, setting));
+    public static final Item SHADOW_SWORD = registerItem(
+            "shadow_sword", setting -> new ShadowSword(ModToolMaterials.SHADOW_TOOLS, 0.8f, -2.6f, setting));
 
     private static Item registerItem(String name, Function<Item.Settings, Item> function) {
         return Registry.register(Registries.ITEM, Identifier.of(MoreOre.MOD_ID, name),

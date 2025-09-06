@@ -1,8 +1,9 @@
 // 1.21.4	-999999999-01-01T00:00:00	Ores glory/Tags for minecraft:item
-61aa7b93621825d6ac6d3f62183bcfe2af91d249 data/minecraft/tags/item/axes.json
-aaf181680be8fe2a21825ae37754b65d939b8078 data/minecraft/tags/item/hoes.json
-8d045101e49be5cb3334402eceab13a1756cded6 data/minecraft/tags/item/pickaxes.json
-c9c018b95c2396eb0895a23a110af38a05b6fc6a data/minecraft/tags/item/shovels.json
-42baea058f5f63a1d621354fe6058faaec44a8de data/minecraft/tags/item/swords.json
-805b38c1d91830764da04078365b253fbc4e7911 data/moreore/tags/item/transformable_items.json
+dcda43e00669831422fed3c940a3100b07506fc9 data/minecraft/tags/item/axes.json
+4f11ad9e1e372559151ed717789f9ec0930f00af data/minecraft/tags/item/hoes.json
+e60b89efd07b3525b96b615a33185b51fb59d184 data/minecraft/tags/item/pickaxes.json
+9f8d32f7705966d0513f5168667f94f9c0e0495c data/minecraft/tags/item/shovels.json
+e022f64ab1932bc4a6188410709fa10050d9d6a6 data/minecraft/tags/item/swords.json
+8b1c11ce3173c9cca98f70262af6cce1a9f34239 data/moreore/tags/item/shadow_tools.json
+2a7552da9cafff821bcf0490effb3a695af88fdd data/moreore/tags/item/transformable_items.json
 0041c7afa8c262e5c56dbca5148915379312c9e2 data/moreore/tags/item/venom_tools.json

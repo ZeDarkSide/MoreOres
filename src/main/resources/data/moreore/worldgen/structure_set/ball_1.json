@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "moreore:ball_1",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 34,
+    "separation": 8,
+    "salt": 89453
+  }
+}

@@ -18,7 +18,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
                 .add(ModBlocks.VENOM_ORE)
-                .add(ModBlocks.RUBY_ORE);
+                .add(ModBlocks.RUBY_ORE)
+                .add(ModBlocks.SHADOW_ORE);
 
 
 
@@ -26,12 +27,18 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.VENOM_ORE);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
-                .add(ModBlocks.RUBY_ORE);
+                .add(ModBlocks.RUBY_ORE)
+                .add(ModBlocks.SHADOW_ORE);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL)
                 ;
         getOrCreateTagBuilder(ModTags.Blocks.NEEDS_VENOM_TOOLS)
                 .addTag(BlockTags.NEEDS_IRON_TOOL);
+
+
+        getOrCreateTagBuilder(ModTags.Blocks.NEEDS_SHADOW_TOOLS)
+                .addTag(BlockTags.NEEDS_DIAMOND_TOOL);
+
 
     }
 }
