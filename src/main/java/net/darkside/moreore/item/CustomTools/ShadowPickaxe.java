@@ -11,9 +11,9 @@ import net.minecraft.world.World;
 import net.darkside.moreore.util.ModTags;
 
 public class ShadowPickaxe extends PickaxeItem {
-    private static final int DURATION = 60;   // ticks (3s)
-    private static final int AMP = 5;         // level I
-    private static final int DARK_LEVEL = 4;  // <= 4 = dark
+    private static final int DURATION = 60;
+    private static final int AMP = 5;
+    private static final int DARK_LEVEL = 4;
 
     public ShadowPickaxe(ToolMaterial material, float attackDamage, float attackSpeed, Settings settings) {
         super(material, attackDamage, attackSpeed, settings);
