@@ -12,7 +12,7 @@ import net.darkside.moreore.util.ModTags;
 
 public class ShadowSword extends SwordItem {
     private static final int DURATION = 60;
-    private static final int AMP = 5;
+    private static final int AMP = 0;
     private static final int DARK_LEVEL = 4;
 
     public ShadowSword(ToolMaterial material, float attackDamage, float attackSpeed, Settings settings) {
@@ -32,7 +32,7 @@ public class ShadowSword extends SwordItem {
 
         if (holdingShadow && (isNight || isDark)) {
             player.addStatusEffect(new StatusEffectInstance(
-                    ModEffect.SHADOW_TOOL,
+                    ModEffect.SHADOW_WEAPON,
                     DURATION,
                     AMP,
                     true,
@@ -40,9 +40,9 @@ public class ShadowSword extends SwordItem {
                     false
             ));
         } else {
-            var cur = player.getStatusEffect(ModEffect.SHADOW_TOOL);
+            var cur = player.getStatusEffect(ModEffect.SHADOW_WEAPON);
             if (cur != null && cur.isAmbient() && !cur.shouldShowIcon()) {
-                player.removeStatusEffect(ModEffect.SHADOW_TOOL);
+                player.removeStatusEffect(ModEffect.SHADOW_WEAPON);
             }
         }
     }

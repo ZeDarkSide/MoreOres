@@ -18,6 +18,13 @@ public class ModEffect {
                             0.6f,
                             EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL));
 
+    public static final RegistryEntry<StatusEffect> SHADOW_WEAPON = registerStatusEffect("shadow_weapon",
+            new ShadowToolEffect(StatusEffectCategory.BENEFICIAL, 0x4B0082)
+                    .addAttributeModifier(EntityAttributes.ATTACK_DAMAGE,
+                            Identifier.of(MoreOre.MOD_ID, "shadow_weapon_attack_damage"),
+                            0.3f,
+                            EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL));
+
     private static RegistryEntry<StatusEffect> registerStatusEffect(String name, StatusEffect effect) {
         return Registry.registerReference(Registries.STATUS_EFFECT, Identifier.of(MoreOre.MOD_ID, name), effect);
     }

@@ -2,8 +2,12 @@
 	"required": true,
 	"package": "net.darkside.moreore.mixin",
 	"compatibilityLevel": "JAVA_21",
+	"refmap": "moreore-refmap.json",
 	"mixins": [
 		"ExampleMixin"
+	],
+	"client": [
+		"client.StatusEffectsDisplayMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

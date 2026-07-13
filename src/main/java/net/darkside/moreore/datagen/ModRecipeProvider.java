@@ -140,7 +140,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .pattern("DSD")
                         .input('S', ModItems.SHADOW_SCRAP)
                         .input('D', Items.DIAMOND)
-                        .criterion(hasItem(ModItems.SHADOW_INGOT), conditionsFromItem(ModItems.SHADOW_INGOT))
+                        .criterion(hasItem(ModItems.SHADOW_SCRAP), conditionsFromItem(ModItems.SHADOW_SCRAP))
                         .offerTo(exporter);
                 // </editor-fold>
 
