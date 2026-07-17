@@ -14,7 +14,7 @@ public class ItemGroups {
 
 
     public static final ItemGroup CHUNK_Of_VENOM = Registry.register(Registries.ITEM_GROUP,
-            Identifier.of(MoreOre.MOD_ID, "chunk_of_venom"),
+            new Identifier(MoreOre.MOD_ID, "chunk_of_venom"),
             FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.CHUNK_OF_VENOM))
                     .displayName(Text.translatable("itemgroup.moreore.unknow"))
                     .entries((displayContext, entries) -> {

@@ -7,26 +7,26 @@ import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
 
+import java.util.UUID;
+
 public class ModEffect {
-    public static final RegistryEntry<StatusEffect> SHADOW_TOOL = registerStatusEffect("shadow_tool",
-            new ShadowToolEffect(StatusEffectCategory.BENEFICIAL, 0x4B0082)
-                    .addAttributeModifier(EntityAttributes.BLOCK_BREAK_SPEED,
-                            Identifier.of(MoreOre.MOD_ID, "shadow_tool_attack_speed"),
-                            0.6f,
-                            EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL));
+    private static final UUID SHADOW_WEAPON_ATTACK_DAMAGE_ID =
+            UUID.nameUUIDFromBytes("moreore_shadow_weapon_attack_damage".getBytes());
 
-    public static final RegistryEntry<StatusEffect> SHADOW_WEAPON = registerStatusEffect("shadow_weapon",
+    public static final StatusEffect SHADOW_TOOL = registerStatusEffect("shadow_tool",
+            new ShadowToolEffect(StatusEffectCategory.BENEFICIAL, 0x4B0082));
+
+    public static final StatusEffect SHADOW_WEAPON = registerStatusEffect("shadow_weapon",
             new ShadowToolEffect(StatusEffectCategory.BENEFICIAL, 0x4B0082)
-                    .addAttributeModifier(EntityAttributes.ATTACK_DAMAGE,
-                            Identifier.of(MoreOre.MOD_ID, "shadow_weapon_attack_damage"),
+                    .addAttributeModifier(EntityAttributes.GENERIC_ATTACK_DAMAGE,
+                            SHADOW_WEAPON_ATTACK_DAMAGE_ID.toString(),
                             0.3f,
-                            EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL));
+                            EntityAttributeModifier.Operation.MULTIPLY_TOTAL));
 
-    private static RegistryEntry<StatusEffect> registerStatusEffect(String name, StatusEffect effect) {
-        return Registry.registerReference(Registries.STATUS_EFFECT, Identifier.of(MoreOre.MOD_ID, name), effect);
+    private static StatusEffect registerStatusEffect(String name, StatusEffect effect) {
+        return Registry.register(Registries.STATUS_EFFECT, new Identifier(MoreOre.MOD_ID, name), effect);
     }
 
     public static void registerEffects() {

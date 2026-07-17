@@ -8,7 +8,7 @@ import net.minecraft.item.HoeItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ToolMaterial;
-import net.minecraft.item.tooltip.TooltipType;
+import net.minecraft.client.item.TooltipContext;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.world.World;
@@ -16,7 +16,7 @@ import net.minecraft.world.World;
 import java.util.List;
 
 public class VenomHoe extends HoeItem {
-    public VenomHoe(ToolMaterial material, float attackDamage, float attackSpeed, Settings settings) {
+    public VenomHoe(ToolMaterial material, int attackDamage, float attackSpeed, Settings settings) {
         super(material, attackDamage, attackSpeed, settings);
     }
 
@@ -43,7 +43,7 @@ public class VenomHoe extends HoeItem {
     }
 
     @Override
-    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType type) {
+    public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
         int seconds = POISON_DURATION / 20;
         tooltip.add(Text.translatable("tooltip.moreore.venom_tool.line1").formatted(Formatting.GREEN));
         tooltip.add(Text.translatable("tooltip.moreore.venom_tool.line2", POISON_AMPLIFIER + 1, seconds)

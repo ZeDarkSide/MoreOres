@@ -15,21 +15,21 @@ import java.util.function.Predicate;
 
 public class ModWorldGen {
     private static final RegistryKey<PlacedFeature> EMBERSTONE_ORE_OVERWORLD = RegistryKey.of(
-            RegistryKeys.PLACED_FEATURE, Identifier.of(MoreOre.MOD_ID, "emberstone_ore_overworld"));
+            RegistryKeys.PLACED_FEATURE, new Identifier(MoreOre.MOD_ID, "emberstone_ore_overworld"));
     private static final RegistryKey<PlacedFeature> EMBERSTONE_ORE_NETHER = RegistryKey.of(
-            RegistryKeys.PLACED_FEATURE, Identifier.of(MoreOre.MOD_ID, "emberstone_ore_nether"));
+            RegistryKeys.PLACED_FEATURE, new Identifier(MoreOre.MOD_ID, "emberstone_ore_nether"));
     private static final RegistryKey<PlacedFeature> VENOM_ORE = RegistryKey.of(
-            RegistryKeys.PLACED_FEATURE, Identifier.of(MoreOre.MOD_ID, "venom_ore"));
+            RegistryKeys.PLACED_FEATURE, new Identifier(MoreOre.MOD_ID, "venom_ore"));
     private static final RegistryKey<PlacedFeature> SHADOW_ORE = RegistryKey.of(
-            RegistryKeys.PLACED_FEATURE, Identifier.of(MoreOre.MOD_ID, "shadow_ore"));
+            RegistryKeys.PLACED_FEATURE, new Identifier(MoreOre.MOD_ID, "shadow_ore"));
     private static final RegistryKey<PlacedFeature> FROSTSTEEL_ORE = RegistryKey.of(
-            RegistryKeys.PLACED_FEATURE, Identifier.of(MoreOre.MOD_ID, "froststeel_ore"));
+            RegistryKeys.PLACED_FEATURE, new Identifier(MoreOre.MOD_ID, "froststeel_ore"));
     private static final RegistryKey<PlacedFeature> FROSTSTEEL_ORE_ICE_SPIKES_RARE = RegistryKey.of(
-            RegistryKeys.PLACED_FEATURE, Identifier.of(MoreOre.MOD_ID, "froststeel_ore_ice_spikes_rare"));
+            RegistryKeys.PLACED_FEATURE, new Identifier(MoreOre.MOD_ID, "froststeel_ore_ice_spikes_rare"));
     private static final RegistryKey<PlacedFeature> FROSTSTEEL_PACKED_ICE_ORE = RegistryKey.of(
-            RegistryKeys.PLACED_FEATURE, Identifier.of(MoreOre.MOD_ID, "froststeel_packed_ice_ore"));
+            RegistryKeys.PLACED_FEATURE, new Identifier(MoreOre.MOD_ID, "froststeel_packed_ice_ore"));
     private static final RegistryKey<PlacedFeature> FROSTSTEEL_PACKED_ICE_ORE_GROUND = RegistryKey.of(
-            RegistryKeys.PLACED_FEATURE, Identifier.of(MoreOre.MOD_ID, "froststeel_packed_ice_ore_ground"));
+            RegistryKeys.PLACED_FEATURE, new Identifier(MoreOre.MOD_ID, "froststeel_packed_ice_ore_ground"));
 
     private static Predicate<BiomeSelectionContext> snowyBiomesExcludingIceSpikes() {
         return BiomeSelectors.includeByKey(

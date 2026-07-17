@@ -7,31 +7,28 @@ import net.darkside.moreore.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricAdvancementProvider;
 import net.minecraft.advancement.Advancement;
-import net.minecraft.advancement.AdvancementEntry;
 import net.minecraft.advancement.AdvancementFrame;
 import net.minecraft.advancement.criterion.InventoryChangedCriterion;
 import net.minecraft.item.ItemStack;
-import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
-import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
 
 public class ModAdvancementProvider extends FabricAdvancementProvider {
-    public ModAdvancementProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
-        super(output, registryLookup);
+    public ModAdvancementProvider(FabricDataOutput output) {
+        super(output);
     }
 
     @Override
-    public void generateAdvancement(RegistryWrapper.WrapperLookup registries, Consumer<AdvancementEntry> consumer) {
+    public void generateAdvancement(Consumer<Advancement> consumer) {
 
-        AdvancementEntry root = Advancement.Builder.create()
+        Advancement root = Advancement.Builder.create()
                 .display(
                         new ItemStack(ModBlocks.VENOM_ORE),
                         Text.translatable("advancement.moreore.venom_ore.title"),
                         Text.translatable("advancement.moreore.venom_ore.desc"),
-                        Identifier.ofVanilla("textures/gui/advancements/backgrounds/stone.png"),
+                        new Identifier("minecraft", "textures/gui/advancements/backgrounds/stone.png"),
                         AdvancementFrame.TASK,
                         true,   // show toast
                         true,   // announce to chat
@@ -42,7 +39,7 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
                 .build(consumer, id("root"));
 
 
-        AdvancementEntry venomSword = Advancement.Builder.create()
+        Advancement venomSword = Advancement.Builder.create()
                 .parent(root)
                 .display(
                         new ItemStack(ModItems.VENOM_SWORD),
@@ -56,7 +53,7 @@ public class ModAdvancementProvider extends FabricAdvancementProvider {
                         InventoryChangedCriterion.Conditions.items(ModItems.VENOM_SWORD))
                 .build(consumer, id("venom_sword"));
 
-        AdvancementEntry venomPickaxe = Advancement.Builder.create()
+        Advancement venomPickaxe = Advancement.Builder.create()
                 .parent(root)
                 .display(
                         new ItemStack(ModItems.VENOM_PICKAXE),

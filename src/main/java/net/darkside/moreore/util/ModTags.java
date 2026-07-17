@@ -16,7 +16,7 @@ public class ModTags {
         public static final TagKey<Block> NEEDS_EMBERSTONE_TOOLS = createTag("needs_emberstone_tools");
         public static final TagKey<Block> WRONG_NEEDS_EMBERSTONE_TOOLS = createTag("wrong_needs_emberstone_tools");
         private static TagKey<Block> createTag(String name) {
-            return TagKey.of(RegistryKeys.BLOCK, Identifier.of(MoreOre.MOD_ID, name));
+            return TagKey.of(RegistryKeys.BLOCK, new Identifier(MoreOre.MOD_ID, name));
         }
     }
 
@@ -29,7 +29,7 @@ public class ModTags {
         public static final TagKey<Item> EMBERSTONE_REPAIR    = createTag("emberstone_repair");
         public static final TagKey<Item> EMBERSTONE_TOOLS     = createTag("emberstone_tools");
         private static TagKey<Item> createTag(String name) {
-            return TagKey.of(RegistryKeys.ITEM, Identifier.of(MoreOre.MOD_ID, name));
+            return TagKey.of(RegistryKeys.ITEM, new Identifier(MoreOre.MOD_ID, name));
         }
     }
 }

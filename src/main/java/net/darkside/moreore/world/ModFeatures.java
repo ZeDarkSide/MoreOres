@@ -7,7 +7,7 @@ import net.minecraft.util.Identifier;
 
 public class ModFeatures {
     public static final EmberstoneOreFeature EMBERSTONE_ORE = Registry.register(
-            Registries.FEATURE, Identifier.of(MoreOre.MOD_ID, "emberstone_ore"),
+            Registries.FEATURE, new Identifier(MoreOre.MOD_ID, "emberstone_ore"),
             new EmberstoneOreFeature(EmberstoneOreFeatureConfig.CODEC));
 
     public static void registerFeatures() {

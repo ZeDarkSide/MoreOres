@@ -1,12 +1,8 @@
 package net.darkside.moreore.util;
 
 import net.darkside.moreore.item.ModItems;
-import net.darkside.moreore.block.ModBlocks;
-import net.darkside.moreore.util.ModTags;
-import net.fabricmc.fabric.api.loot.v3.LootTableEvents;
-import net.minecraft.enchantment.Enchantment;
+import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
 import net.minecraft.enchantment.Enchantments;
-import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.LootTable;
@@ -20,34 +16,25 @@ import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
 import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import net.minecraft.predicate.NumberRange;
 import net.minecraft.predicate.item.EnchantmentPredicate;
-import net.minecraft.predicate.item.EnchantmentsPredicate;
 import net.minecraft.predicate.item.ItemPredicate;
-import net.minecraft.predicate.item.ItemSubPredicateTypes;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.Identifier;
 
-
-import java.util.List;
-
 public final class ModLootTableModifiers {
-    private static final Identifier DIAMOND_ORE_ID = Identifier.of("minecraft", "blocks/diamond_ore");
-    private static final Identifier DEEPSLATE_DIAMOND_ORE_ID = Identifier.of("minecraft", "blocks/deepslate_diamond_ore");
+    private static final Identifier DIAMOND_ORE_ID = new Identifier("minecraft", "blocks/diamond_ore");
+    private static final Identifier DEEPSLATE_DIAMOND_ORE_ID = new Identifier("minecraft", "blocks/deepslate_diamond_ore");
 
     public static void register() {
-        LootTableEvents.REPLACE.register((key, original, source, registries) -> {
-            if (key.getValue().equals(DIAMOND_ORE_ID)) {
+        LootTableEvents.REPLACE.register((resourceManager, lootManager, id, original, source) -> {
+            if (id.equals(DIAMOND_ORE_ID)) {
                 return makeDiamondLikeTable(
-                        registries,
-                        /* silk drop: */ ItemEntry.builder(Items.DIAMOND_ORE), // if you want silk to drop vanilla diamond_ore instead, swap to ItemEntry.builder(Items.DIAMOND_ORE)
+                        /* silk drop: */ ItemEntry.builder(Items.DIAMOND_ORE),
                         /* default drop: */ ItemEntry.builder(Items.DIAMOND),
                         /* venom drop: */ ItemEntry.builder(ModItems.DECAYED_DIAMOND)
                 );
             }
-            if (key.getValue().equals(DEEPSLATE_DIAMOND_ORE_ID)) {
+            if (id.equals(DEEPSLATE_DIAMOND_ORE_ID)) {
                 return makeDiamondLikeTable(
-                        registries,
-                        /* silk drop: */ ItemEntry.builder(Items.DEEPSLATE_DIAMOND_ORE), // or Items.DEEPSLATE_DIAMOND_ORE for pure vanilla silk behavior
+                        /* silk drop: */ ItemEntry.builder(Items.DEEPSLATE_DIAMOND_ORE),
                         /* default drop: */ ItemEntry.builder(Items.DIAMOND),
                         /* venom drop: */ ItemEntry.builder(ModItems.DECAYED_DIAMOND)
                 );
@@ -57,32 +44,22 @@ public final class ModLootTableModifiers {
     }
 
     private static LootTable makeDiamondLikeTable(
-            RegistryWrapper.WrapperLookup registries,
             ItemEntry.Builder<?> silkDrop,
             ItemEntry.Builder<?> defaultDrop,
             ItemEntry.Builder<?> venomDrop
     ) {
-        RegistryWrapper.Impl<Enchantment> enchReg = registries.getOrThrow(RegistryKeys.ENCHANTMENT);
-        RegistryWrapper.Impl<Item>        itemReg = registries.getOrThrow(RegistryKeys.ITEM);
-
         LootCondition.Builder silkTouch = MatchToolLootCondition.builder(
-                ItemPredicate.Builder.create().subPredicate(
-                        ItemSubPredicateTypes.ENCHANTMENTS,
-                        EnchantmentsPredicate.enchantments(List.of(
-                                new EnchantmentPredicate(enchReg.getOrThrow(Enchantments.SILK_TOUCH),
-                                        NumberRange.IntRange.atLeast(1))
-                        ))
+                ItemPredicate.Builder.create().enchantment(
+                        new EnchantmentPredicate(Enchantments.SILK_TOUCH, NumberRange.IntRange.atLeast(1))
                 )
         );
 
-
         LootCondition.Builder isVenomTool = MatchToolLootCondition.builder(
-                ItemPredicate.Builder.create().tag(itemReg, ModTags.Items.VENOM_TOOLS)
+                ItemPredicate.Builder.create().tag(ModTags.Items.VENOM_TOOLS)
         );
 
-
         defaultDrop = defaultDrop
-                .apply(ApplyBonusLootFunction.oreDrops(enchReg.getOrThrow(Enchantments.FORTUNE)))
+                .apply(ApplyBonusLootFunction.oreDrops(Enchantments.FORTUNE))
                 .apply(ExplosionDecayLootFunction.builder());
 
         venomDrop = venomDrop

@@ -2,13 +2,13 @@ package net.darkside.moreore.item.CustomTools.Emberstone;
 
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.minecraft.entity.ItemEntity;
+import net.minecraft.inventory.Inventory;
+import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.particle.ParticleTypes;
-import net.minecraft.recipe.RecipeEntry;
+import net.minecraft.recipe.RecipeManager;
 import net.minecraft.recipe.RecipeType;
-import net.minecraft.recipe.ServerRecipeManager;
 import net.minecraft.recipe.SmeltingRecipe;
-import net.minecraft.recipe.input.SingleStackRecipeInput;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
@@ -25,8 +25,8 @@ import java.util.Queue;
 import java.util.Set;
 
 public class EmberstoneAutoSmelt {
-    private static final ServerRecipeManager.MatchGetter<SingleStackRecipeInput, SmeltingRecipe> SMELTING_MATCHER =
-            ServerRecipeManager.createCachedMatchGetter(RecipeType.SMELTING);
+    private static final RecipeManager.MatchGetter<Inventory, SmeltingRecipe> SMELTING_MATCHER =
+            RecipeManager.createCachedMatchGetter(RecipeType.SMELTING);
     private static final double SEARCH_RADIUS = 1.0;
 
     private record PendingSmelt(ServerWorld world, BlockPos pos, Set<Integer> preExistingItemIds) {
@@ -75,13 +75,13 @@ public class EmberstoneAutoSmelt {
         boolean smelted = false;
         for (ItemEntity itemEntity : nearby) {
             ItemStack stack = itemEntity.getStack();
-            SingleStackRecipeInput input = new SingleStackRecipeInput(new ItemStack(stack.getItem()));
-            Optional<RecipeEntry<SmeltingRecipe>> match = SMELTING_MATCHER.getFirstMatch(input, world);
+            SimpleInventory input = new SimpleInventory(new ItemStack(stack.getItem()));
+            Optional<SmeltingRecipe> match = SMELTING_MATCHER.getFirstMatch(input, world);
             if (match.isEmpty()) {
                 continue;
             }
 
-            ItemStack singleResult = match.get().value().craft(input, world.getRegistryManager());
+            ItemStack singleResult = match.get().craft(input, world.getRegistryManager());
             if (singleResult.isEmpty()) {
                 continue;
             }

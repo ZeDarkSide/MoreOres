@@ -18,7 +18,7 @@ import java.util.function.Consumer;
 import static terrablender.api.ParameterUtils.*;
 
 public class WastelandRegion extends Region {
-    public static final RegistryKey<Biome> WASTELAND = RegistryKey.of(RegistryKeys.BIOME, Identifier.of(MoreOre.MOD_ID, "wasteland"));
+    public static final RegistryKey<Biome> WASTELAND = RegistryKey.of(RegistryKeys.BIOME, new Identifier(MoreOre.MOD_ID, "wasteland"));
 
     public WastelandRegion(Identifier name, int weight) {
         super(name, RegionType.OVERWORLD, weight);

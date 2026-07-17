@@ -4,11 +4,12 @@ import net.darkside.moreore.effect.ModEffect;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.HoeItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ToolMaterial;
-import net.minecraft.item.tooltip.TooltipType;
+import net.minecraft.client.item.TooltipContext;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.world.World;
@@ -45,16 +46,25 @@ public class ShadowHoe extends HoeItem {
                     false,
                     false
             ));
+            player.addStatusEffect(new StatusEffectInstance(
+                    StatusEffects.HASTE,
+                    DURATION,
+                    1,
+                    true,
+                    false,
+                    false
+            ));
         } else {
             var cur = player.getStatusEffect(ModEffect.SHADOW_TOOL);
             if (cur != null && cur.isAmbient() && !cur.shouldShowIcon()) {
                 player.removeStatusEffect(ModEffect.SHADOW_TOOL);
+                player.removeStatusEffect(StatusEffects.HASTE);
             }
         }
     }
 
     @Override
-    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType type) {
+    public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
         tooltip.add(Text.translatable("tooltip.moreore.shadow_tool.line1").formatted(Formatting.DARK_PURPLE));
         tooltip.add(Text.translatable("tooltip.moreore.shadow_tool.line2").formatted(Formatting.GRAY));
     }

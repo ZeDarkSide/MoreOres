@@ -12,7 +12,7 @@ import terrablender.api.TerraBlenderApi;
 public class MoreOreTerraBlender implements TerraBlenderApi {
     @Override
     public void onTerraBlenderInitialized() {
-        Regions.register(new WastelandRegion(Identifier.of(MoreOre.MOD_ID, "wasteland_region"), 1));
+        Regions.register(new WastelandRegion(new Identifier(MoreOre.MOD_ID, "wasteland_region"), 1));
 
         MaterialRules.MaterialRule topBlock = MaterialRules.condition(
                 MaterialRules.water(0, 0),

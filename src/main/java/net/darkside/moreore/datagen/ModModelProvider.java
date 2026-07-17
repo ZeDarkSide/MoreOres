@@ -3,15 +3,14 @@ package net.darkside.moreore.datagen;
 import net.darkside.moreore.MoreOre;
 import net.darkside.moreore.block.ModBlocks;
 import net.darkside.moreore.item.ModItems;
-import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.minecraft.client.data.BlockStateModelGenerator;
-import net.minecraft.client.data.ItemModelGenerator;
-import net.minecraft.client.data.Models;
-import net.minecraft.client.data.ItemModels;
-import net.minecraft.client.data.TextureKey;
-import net.minecraft.client.data.TextureMap;
-import net.minecraft.client.data.TexturedModel;
+import net.minecraft.data.client.BlockStateModelGenerator;
+import net.minecraft.data.client.ItemModelGenerator;
+import net.minecraft.data.client.Models;
+import net.minecraft.data.client.TextureKey;
+import net.minecraft.data.client.TextureMap;
+import net.minecraft.data.client.TexturedModel;
 import net.minecraft.util.Identifier;
 
 public class ModModelProvider extends FabricModelProvider {
@@ -25,12 +24,13 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.UNKNOW_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.VENOM_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RUBY_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SHADOW_ORE);
 
         TexturedModel.Factory froststeelOreModel = TexturedModel.CUBE_ALL.andThen(
-                textures -> textures.put(TextureKey.ALL, Identifier.of(MoreOre.MOD_ID, "block/froststeel_ore_stone")));
+                textures -> textures.put(TextureKey.ALL, new Identifier(MoreOre.MOD_ID, "block/froststeel_ore_stone")));
         blockStateModelGenerator.registerSingleton(ModBlocks.FROSTSTEEL_ORE, froststeelOreModel);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.FROSTSTEEL_PACKED_ICE_ORE);
 
@@ -43,20 +43,17 @@ public class ModModelProvider extends FabricModelProvider {
                 .button(ModBlocks.FIRE_BUTTON);
 
         TextureMap fireLogTextures = TextureMap.sideEnd(
-                Identifier.of(MoreOre.MOD_ID, "block/fire_log_side_1"),
-                Identifier.of(MoreOre.MOD_ID, "block/fire_log_top_1"));
+                new Identifier(MoreOre.MOD_ID, "block/fire_log_side_1"),
+                new Identifier(MoreOre.MOD_ID, "block/fire_log_top_1"));
         blockStateModelGenerator.new LogTexturePool(fireLogTextures).log(ModBlocks.FIRE_LOG);
 
         TexturedModel.Factory fireLeavesModel = TexturedModel.LEAVES.andThen(
-                textures -> textures.put(TextureKey.ALL, Identifier.of(MoreOre.MOD_ID, "block/fire_leaves_1")));
-        blockStateModelGenerator.registerTintedBlockAndItem(ModBlocks.FIRE_LEAVES, fireLeavesModel, FIRE_LEAVES_TINT);
+                textures -> textures.put(TextureKey.ALL, new Identifier(MoreOre.MOD_ID, "block/fire_leaves_1")));
+        blockStateModelGenerator.registerSingleton(ModBlocks.FIRE_LEAVES, fireLeavesModel);
 
-        blockStateModelGenerator.registerTintableCross(ModBlocks.FIRE_SAPLING, BlockStateModelGenerator.CrossType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(ModBlocks.FIRE_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
 
-        blockStateModelGenerator.registerTintedItemModel(
-                ModBlocks.WASTELAND_GRASS_BLOCK,
-                Identifier.of(MoreOre.MOD_ID, "block/wasteland_grass_block"),
-                ItemModels.constantTintSource(WASTELAND_GRASS_TINT));
+        // WASTELAND_GRASS_BLOCK blockstate/model are hand-authored in resources (grass-tint layout); not datagen'd.
 
         blockStateModelGenerator.registerDoor(ModBlocks.FIRE_DOOR);
         blockStateModelGenerator.registerTrapdoor(ModBlocks.FIRE_TRAPDOOR);
@@ -64,6 +61,7 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
+        itemModelGenerator.register(ModItems.UNKOWN_ITEM, Models.GENERATED);
         itemModelGenerator.register(ModItems.CHUNK_OF_VENOM, Models.GENERATED);
         itemModelGenerator.register(ModItems.DECAYED_DIAMOND, Models.GENERATED);
         itemModelGenerator.register(ModItems.SHADOW_SCRAP, Models.GENERATED);

@@ -90,7 +90,7 @@ GOLD
     public static final Item VENOM_PICKAXE = registerItem("venom_pickaxe",
             setting -> new VenomPickaxe(ModToolMaterials.VENOM_TOOLS, -2, -2.8f, setting));
     public static final Item VENOM_SWORD = registerItem(
-            "venom_sword", setting -> new VenomSwordClass(ModToolMaterials.VENOM_TOOLS, .5f, -2.6f, setting));
+            "venom_sword", setting -> new VenomSwordClass(ModToolMaterials.VENOM_TOOLS, 1, -2.6f, setting));
     public static final Item VENOM_AXE = registerItem(
             "venom_axe", setting -> new VenomAxe(ModToolMaterials.VENOM_TOOLS, 1.5f, -3f, setting));
     public static final Item VENOM_HOE = registerItem(
@@ -110,22 +110,22 @@ GOLD
     public static final Item SHADOW_HOE = registerItem(
             "shadow_hoe", setting -> new ShadowHoe(ModToolMaterials.SHADOW_TOOLS, -4, -2.8f, setting));
     public static final Item SHADOW_SWORD = registerItem(
-            "shadow_sword", setting -> new ShadowSword(ModToolMaterials.SHADOW_TOOLS, 0.8f, -2.6f, setting));
+            "shadow_sword", setting -> new ShadowSword(ModToolMaterials.SHADOW_TOOLS, 1, -2.6f, setting));
 
     public static final Item EMBERSTONE_PICKAXE = registerItem("emberstone_pickaxe",
-            setting -> new EmberstonePickaxe(ModToolMaterials.EMBERSTONE_TOOLS, 2.0f, -2.9f, setting.fireproof()));
+            setting -> new EmberstonePickaxe(ModToolMaterials.EMBERSTONE_TOOLS, 2, -2.9f, setting.fireproof()));
     public static final Item EMBERSTONE_AXE = registerItem("emberstone_axe",
             setting -> new EmberstoneAxe(ModToolMaterials.EMBERSTONE_TOOLS, 6.0f, -3.1f, setting.fireproof()));
     public static final Item EMBERSTONE_SHOVEL = registerItem("emberstone_shovel",
             setting -> new EmberstoneShovel(ModToolMaterials.EMBERSTONE_TOOLS, 2.5f, -3.1f, setting.fireproof()));
     public static final Item EMBERSTONE_HOE = registerItem("emberstone_hoe",
-            setting -> new EmberstoneHoe(ModToolMaterials.EMBERSTONE_TOOLS, -3.0f, -0.1f, setting.fireproof()));
+            setting -> new EmberstoneHoe(ModToolMaterials.EMBERSTONE_TOOLS, -3, -0.1f, setting.fireproof()));
     public static final Item EMBERSTONE_SWORD = registerItem("emberstone_sword",
-            setting -> new EmberstoneSword(ModToolMaterials.EMBERSTONE_TOOLS, 4.0f, -2.5f, setting.fireproof()));
+            setting -> new EmberstoneSword(ModToolMaterials.EMBERSTONE_TOOLS, 4, -2.5f, setting.fireproof()));
 
     private static Item registerItem(String name, Function<Item.Settings, Item> function) {
-        return Registry.register(Registries.ITEM, Identifier.of(MoreOre.MOD_ID, name),
-                function.apply(new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(MoreOre.MOD_ID, name)))));
+        return Registry.register(Registries.ITEM, new Identifier(MoreOre.MOD_ID, name),
+                function.apply(new Item.Settings()));
     }
 
     public static void registerModItems() {

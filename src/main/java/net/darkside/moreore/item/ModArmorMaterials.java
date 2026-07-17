@@ -23,7 +23,7 @@ package net.darkside.moreore.item;
  Example (matches ModToolMaterials' VENOM_TOOLS/SHADOW_TOOLS naming pattern):
 
    public static final RegistryKey<EquipmentAsset> EXAMPLE_ASSET =
-           RegistryKey.of(EquipmentAssetKeys.REGISTRY_KEY, Identifier.of(MoreOre.MOD_ID, "example"));
+           RegistryKey.of(EquipmentAssetKeys.REGISTRY_KEY, new Identifier(MoreOre.MOD_ID, "example"));
 
    public static final ArmorMaterial EXAMPLE_ARMOR = new ArmorMaterial(
            15, // durability multiplier
@@ -49,7 +49,7 @@ package net.darkside.moreore.item;
    4. ModModelProvider   - itemModelGenerator.register(item, Models.GENERATED) for the item icon
    5. A datagen provider that writes assets/moreore/equipment/example.json, e.g.:
 
-        EquipmentModel.builder().addHumanoidLayers(Identifier.of(MoreOre.MOD_ID, "example")).build()
+        EquipmentModel.builder().addHumanoidLayers(new Identifier(MoreOre.MOD_ID, "example")).build()
 
       via DataProvider.writeAllToPath(writer, EquipmentModel.CODEC, resolver::resolveJson, map)
       (mirrors vanilla's net.minecraft.client.data.EquipmentAssetProvider), registered in
