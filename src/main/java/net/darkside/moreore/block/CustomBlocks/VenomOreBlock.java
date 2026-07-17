@@ -1,4 +1,4 @@
-package net.darkside.moreore.block;
+package net.darkside.moreore.block.CustomBlocks;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.block.ExperienceDroppingBlock;
