@@ -1,0 +1,39 @@
+{
+  "parent": "moreore:root",
+  "criteria": {
+    "has_venom_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "moreore:venom_pickaxe"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.moreore.venom_pick.desc"
+    },
+    "frame": "goal",
+    "hidden": false,
+    "icon": {
+      "item": "moreore:venom_pickaxe",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.moreore.venom_pick.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_venom_pickaxe"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

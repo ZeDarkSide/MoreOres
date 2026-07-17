@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "moreore:fire_log",
+    "moreore:fire_planks",
+    "moreore:fire_door",
+    "moreore:fire_trapdoor",
+    "moreore:fire_stairs",
+    "moreore:fire_slab",
+    "moreore:fire_fence",
+    "moreore:fire_fence_gate",
+    "moreore:fire_pressure_plate",
+    "moreore:fire_button"
+  ]
+}

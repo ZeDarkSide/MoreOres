@@ -14,7 +14,7 @@ public class VenomOreBlock extends ExperienceDroppingBlock {
     private static final int POISON_AMPLIFIER = 2; // Poison I
 
     public VenomOreBlock(IntProvider xp, Settings settings) {
-        super(xp, settings);
+        super(settings, xp);
     }
 
     @Override

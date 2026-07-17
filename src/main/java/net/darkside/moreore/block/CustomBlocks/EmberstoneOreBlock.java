@@ -11,16 +11,16 @@ import net.minecraft.world.World;
 
 public class EmberstoneOreBlock extends ExperienceDroppingBlock {
     public EmberstoneOreBlock(IntProvider xp, Settings settings) {
-        super(xp, settings);
+        super(settings, xp);
     }
 
     @Override
-    public BlockState onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
+    public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
         if (world instanceof ServerWorld serverWorld) {
             serverWorld.spawnParticles(ParticleTypes.LARGE_SMOKE,
                     pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5,
                     12, 0.3, 0.3, 0.3, 0.02);
         }
-        return super.onBreak(world, pos, state, player);
+        super.onBreak(world, pos, state, player);
     }
 }

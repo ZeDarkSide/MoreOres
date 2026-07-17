@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 300,
+  "experience": 0.5,
+  "group": "emberstone_ores",
+  "ingredient": {
+    "item": "moreore:emberstone_ore"
+  },
+  "result": "moreore:emberstone_ingot"
+}

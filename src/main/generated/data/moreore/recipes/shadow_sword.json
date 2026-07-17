@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": {
+      "item": "moreore:shadow_ingot"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " R ",
+    " R ",
+    " S "
+  ],
+  "result": {
+    "item": "moreore:shadow_sword"
+  },
+  "show_notification": true
+}

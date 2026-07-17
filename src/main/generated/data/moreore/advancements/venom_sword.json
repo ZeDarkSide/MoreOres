@@ -1,0 +1,39 @@
+{
+  "parent": "moreore:root",
+  "criteria": {
+    "has_venom_sword": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "moreore:venom_sword"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "translate": "advancement.moreore.venom_sword.desc"
+    },
+    "frame": "goal",
+    "hidden": false,
+    "icon": {
+      "item": "moreore:venom_sword",
+      "nbt": "{Damage:0}"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.moreore.venom_sword.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_venom_sword"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

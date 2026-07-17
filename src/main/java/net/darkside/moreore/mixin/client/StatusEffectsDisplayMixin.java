@@ -8,11 +8,11 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
 import net.darkside.moreore.effect.ModEffect;
-import net.minecraft.client.gui.screen.ingame.StatusEffectsDisplay;
+import net.minecraft.client.gui.screen.ingame.AbstractInventoryScreen;
 import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 
-@Mixin(StatusEffectsDisplay.class)
+@Mixin(AbstractInventoryScreen.class)
 public class StatusEffectsDisplayMixin {
 
     @Redirect(

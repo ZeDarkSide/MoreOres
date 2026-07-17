@@ -2,63 +2,57 @@ package net.darkside.moreore.item;
 
 import net.darkside.moreore.util.ModTags;
 import net.minecraft.item.ToolMaterial;
+import net.minecraft.recipe.Ingredient;
 
-public class ModToolMaterials {
+public enum ModToolMaterials implements ToolMaterial {
+    VENOM_TOOLS(2, 250, 5.0F, 4.0F, 22, ModTags.Items.VENOM_REPAIR),
+    SHADOW_TOOLS(3, 1650, 7.0F, 4.0F, 8, ModTags.Items.SHADOW_REPAIR),
+    EMBERSTONE_TOOLS(3, 1800, 8.0F, 3.0F, 10, ModTags.Items.EMBERSTONE_REPAIR);
 
+    private final int miningLevel;
+    private final int durability;
+    private final float miningSpeed;
+    private final float attackDamage;
+    private final int enchantability;
+    private final net.minecraft.registry.tag.TagKey<net.minecraft.item.Item> repairItems;
 
-    public static ToolMaterial VENOM_TOOLS = new ToolMaterial(ModTags.Blocks.WRONG_NEEDS_VENOM_TOOLS,
-            250, 5.0F, 4.0F, 22, ModTags.Items.VENOM_REPAIR);
+    ModToolMaterials(int miningLevel, int durability, float miningSpeed, float attackDamage, int enchantability,
+                      net.minecraft.registry.tag.TagKey<net.minecraft.item.Item> repairItems) {
+        this.miningLevel = miningLevel;
+        this.durability = durability;
+        this.miningSpeed = miningSpeed;
+        this.attackDamage = attackDamage;
+        this.enchantability = enchantability;
+        this.repairItems = repairItems;
+    }
 
-    public static ToolMaterial SHADOW_TOOLS = new ToolMaterial(ModTags.Blocks.WRONG_NEEDS_SHADOW_TOOLS,
-            1650, 7.0F, 4.0F, 8, ModTags.Items.SHADOW_REPAIR);
+    @Override
+    public int getDurability() {
+        return durability;
+    }
 
-    public static ToolMaterial EMBERSTONE_TOOLS = new ToolMaterial(ModTags.Blocks.WRONG_NEEDS_EMBERSTONE_TOOLS,
-            1800, 8.0F, 3.0F, 10, ModTags.Items.EMBERSTONE_REPAIR);
+    @Override
+    public float getMiningSpeedMultiplier() {
+        return miningSpeed;
+    }
 
+    @Override
+    public float getAttackDamage() {
+        return attackDamage;
+    }
+
+    @Override
+    public int getMiningLevel() {
+        return miningLevel;
+    }
+
+    @Override
+    public int getEnchantability() {
+        return enchantability;
+    }
+
+    @Override
+    public Ingredient getRepairIngredient() {
+        return Ingredient.fromTag(repairItems);
+    }
 }
-
-
-/*
-======================================================================
- VANILLA TOOL MATERIALS REFERENCE (for ToolMaterial constructor)
-======================================================================
-VANILLA VALUES:
-WOOD
-  Durability: 59
-  Mining Speed: 2.0
-  Attack Damage Bonus: 0.0
-  Enchantability: 15
-
-STONE
-  Durability: 131
-  Mining Speed: 4.0
-  Attack Damage Bonus: 1.0
-  Enchantability: 5
-
-IRON
-  Durability: 250
-  Mining Speed: 6.0
-  Attack Damage Bonus: 2.0
-  Enchantability: 14
-
-DIAMOND
-  Durability: 1561
-  Mining Speed: 8.0
-  Attack Damage Bonus: 3.0
-  Enchantability: 10
-
-GOLD
-  Durability: 32
-  Mining Speed: 12.0
-  Attack Damage Bonus: 0.0
-  Enchantability: 22
-
-NETHERITE
-  Durability: 2031
-  Mining Speed: 9.0
-  Attack Damage Bonus: 4.0
-  Enchantability: 15
-
-======================================================================
-
-*/

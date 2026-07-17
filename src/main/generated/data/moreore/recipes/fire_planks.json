@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "moreore:fire_log"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "moreore:fire_planks"
+  }
+}

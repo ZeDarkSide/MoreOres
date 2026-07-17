@@ -1,0 +1,38 @@
+{
+  "criteria": {
+    "got_venom_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "moreore:chunk_of_venom"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png",
+    "description": {
+      "translate": "advancement.moreore.venom_ore.desc"
+    },
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "moreore:venom_ore"
+    },
+    "show_toast": true,
+    "title": {
+      "translate": "advancement.moreore.venom_ore.title"
+    }
+  },
+  "requirements": [
+    [
+      "got_venom_ore"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

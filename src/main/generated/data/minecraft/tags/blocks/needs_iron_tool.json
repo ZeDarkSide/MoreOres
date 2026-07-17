@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "moreore:venom_ore",
+    "moreore:emberstone_ore",
+    "moreore:froststeel_ore",
+    "moreore:froststeel_packed_ice_ore"
+  ]
+}

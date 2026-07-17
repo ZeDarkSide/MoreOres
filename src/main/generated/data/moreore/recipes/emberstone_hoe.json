@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": {
+      "item": "moreore:emberstone_ingot"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "RR ",
+    " S ",
+    " S "
+  ],
+  "result": {
+    "item": "moreore:emberstone_hoe"
+  },
+  "show_notification": true
+}

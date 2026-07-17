@@ -8,7 +8,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
-import net.minecraft.item.tooltip.TooltipType;
+import net.minecraft.client.item.TooltipContext;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.world.World;
@@ -21,7 +21,7 @@ public class ShadowSword extends SwordItem {
     private static final int AMP = 0;
     private static final int DARK_LEVEL = 4;
 
-    public ShadowSword(ToolMaterial material, float attackDamage, float attackSpeed, Settings settings) {
+    public ShadowSword(ToolMaterial material, int attackDamage, float attackSpeed, Settings settings) {
         super(material, attackDamage, attackSpeed, settings);
     }
 
@@ -54,7 +54,7 @@ public class ShadowSword extends SwordItem {
     }
 
     @Override
-    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType type) {
+    public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
         tooltip.add(Text.translatable("tooltip.moreore.shadow_weapon.line1").formatted(Formatting.DARK_PURPLE));
         tooltip.add(Text.translatable("tooltip.moreore.shadow_weapon.line2").formatted(Formatting.GRAY));
     }

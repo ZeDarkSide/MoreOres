@@ -1,0 +1,12 @@
+// 1.20.1	2026-07-17T15:10:41.4136253	More Ores/Tags for minecraft:item
+7ea36e3f3f946f0e1ed011a5a1ddd01001dab2de data\moreore\tags\items\emberstone_repair.json
+ded4c467677b695e2edc8258c69275beb1b971db data\minecraft\tags\items\shovels.json
+c4b19ce807abf0339e637d214083a9724532413b data\minecraft\tags\items\swords.json
+7275c7515b8c729c957a9f4d514ae479e62d05a5 data\minecraft\tags\items\planks.json
+485676e928994f474758b86507bfdef5026f363a data\moreore\tags\items\shadow_tools.json
+77c08464889ce2a09a07a67bd615bbb855947e7a data\minecraft\tags\items\axes.json
+fdd38d1afe6f506357480eef8d0310b83d2d39ae data\moreore\tags\items\venom_tools.json
+513cc0894855c5a8515e69d52e6080ceb7770a33 data\minecraft\tags\items\hoes.json
+b322b5abcdef93cd0523570a13c9ff62b5233f73 data\moreore\tags\items\emberstone_tools.json
+cab607586d89f2184473664a4448955c1bfad340 data\moreore\tags\items\transformable_items.json
+a375db78fece580af10e604d3c8e9233ea3be297 data\minecraft\tags\items\pickaxes.json

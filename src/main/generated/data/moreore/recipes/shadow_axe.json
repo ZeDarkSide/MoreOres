@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": {
+      "item": "moreore:shadow_ingot"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " RR",
+    " SR",
+    " S "
+  ],
+  "result": {
+    "item": "moreore:shadow_axe"
+  },
+  "show_notification": true
+}

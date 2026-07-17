@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:chunk_of_venom_from_smelting_venom_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_venom_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "moreore:venom_ore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_venom_ore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:chunk_of_venom_from_smelting_venom_ore"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": {
+      "item": "moreore:chunk_of_venom"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " R ",
+    " S ",
+    " S "
+  ],
+  "result": {
+    "item": "moreore:venom_shovel"
+  },
+  "show_notification": true
+}
