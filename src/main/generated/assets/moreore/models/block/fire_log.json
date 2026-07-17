@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "moreore:block/fire_log_top_1",
+    "side": "moreore:block/fire_log_side_1"
+  }
+}

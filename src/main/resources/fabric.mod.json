@@ -2,7 +2,7 @@
 	"schemaVersion": 1,
 	"id": "moreore",
 	"version": "${version}",
-	"name": "Ores glory",
+	"name": "More Ores",
 	"description": "This mods adds more ores dungeons and gear and woods for you",
 	"authors": [
 		"ZeDarkSide"
@@ -22,7 +22,8 @@
 		"fabric-datagen": [
 			"net.darkside.moreore.MoreOreDataGenerator"
 		],
-      "client": ["net.darkside.moreore.MoreOreClient"]
+      "client": ["net.darkside.moreore.MoreOreClient"],
+      "terrablender": ["net.darkside.moreore.world.MoreOreTerraBlender"]
 	},
 	"mixins": [
 		"moreore.mixins.json"
@@ -31,7 +32,8 @@
 		"fabricloader": ">=0.17.2",
 		"minecraft": "~1.21.4",
 		"java": ">=21",
-		"fabric-api": "*"
+		"fabric-api": "*",
+		"terrablender": "*"
 	},
 	"suggests": {
 		"another-mod": "*"

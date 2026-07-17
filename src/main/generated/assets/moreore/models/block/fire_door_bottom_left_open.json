@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_left_open",
+  "textures": {
+    "bottom": "moreore:block/fire_door_bottom",
+    "top": "moreore:block/fire_door_top"
+  }
+}

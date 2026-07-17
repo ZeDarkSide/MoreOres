@@ -4,11 +4,17 @@ import net.darkside.moreore.effect.ModEffect;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ToolMaterial;
+import net.minecraft.item.tooltip.TooltipType;
+import net.minecraft.text.Text;
+import net.minecraft.util.Formatting;
 import net.minecraft.world.World;
 import net.darkside.moreore.util.ModTags;
+
+import java.util.List;
 
 public class ShadowSword extends SwordItem {
     private static final int DURATION = 60;
@@ -45,5 +51,11 @@ public class ShadowSword extends SwordItem {
                 player.removeStatusEffect(ModEffect.SHADOW_WEAPON);
             }
         }
+    }
+
+    @Override
+    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType type) {
+        tooltip.add(Text.translatable("tooltip.moreore.shadow_weapon.line1").formatted(Formatting.DARK_PURPLE));
+        tooltip.add(Text.translatable("tooltip.moreore.shadow_weapon.line2").formatted(Formatting.GRAY));
     }
 }

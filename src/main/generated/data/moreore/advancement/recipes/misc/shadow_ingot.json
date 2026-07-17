@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_shadow_ingot": {
+    "has_shadow_scrap": {
       "conditions": {
         "items": [
           {
-            "items": "moreore:shadow_ingot"
+            "items": "moreore:shadow_scrap"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_shadow_ingot"
+      "has_shadow_scrap"
     ]
   ],
   "rewards": {

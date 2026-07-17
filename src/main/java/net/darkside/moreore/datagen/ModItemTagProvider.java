@@ -1,5 +1,6 @@
 package net.darkside.moreore.datagen;
 
+import net.darkside.moreore.block.ModBlocks;
 import net.darkside.moreore.item.ModItems;
 import net.darkside.moreore.util.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -36,24 +37,40 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.SHADOW_AXE)
                 .add(ModItems.SHADOW_SWORD)
                 .add(ModItems.SHADOW_PICKAXE);
+        getOrCreateTagBuilder(ModTags.Items.EMBERSTONE_TOOLS)
+                .add(ModItems.EMBERSTONE_PICKAXE)
+                .add(ModItems.EMBERSTONE_AXE)
+                .add(ModItems.EMBERSTONE_SHOVEL)
+                .add(ModItems.EMBERSTONE_HOE)
+                .add(ModItems.EMBERSTONE_SWORD);
+        getOrCreateTagBuilder(ModTags.Items.EMBERSTONE_REPAIR)
+                .add(ModItems.EMBERSTONE_INGOT);
         getOrCreateTagBuilder(ItemTags.PICKAXES)
                 .add(ModItems.VENOM_PICKAXE)
-                .add(ModItems.SHADOW_PICKAXE);
+                .add(ModItems.SHADOW_PICKAXE)
+                .add(ModItems.EMBERSTONE_PICKAXE);
 
         getOrCreateTagBuilder(ItemTags.SWORDS)
                 .add(ModItems.VENOM_SWORD)
-                .add(ModItems.SHADOW_SWORD);
+                .add(ModItems.SHADOW_SWORD)
+                .add(ModItems.EMBERSTONE_SWORD);
 
         getOrCreateTagBuilder(ItemTags.AXES)
                 .add(ModItems.VENOM_AXE)
-                .add(ModItems.SHADOW_AXE);
+                .add(ModItems.SHADOW_AXE)
+                .add(ModItems.EMBERSTONE_AXE);
 
         getOrCreateTagBuilder(ItemTags.HOES)
                 .add(ModItems.VENOM_HOE)
-                .add(ModItems.SHADOW_HOE);
+                .add(ModItems.SHADOW_HOE)
+                .add(ModItems.EMBERSTONE_HOE);
 
         getOrCreateTagBuilder(ItemTags.SHOVELS)
                 .add(ModItems.VENOM_SHOVEL)
-                .add(ModItems.SHADOW_SHOVEL);
+                .add(ModItems.SHADOW_SHOVEL)
+                .add(ModItems.EMBERSTONE_SHOVEL);
+
+        getOrCreateTagBuilder(ItemTags.PLANKS)
+                .add(ModBlocks.FIRE_PLANKS.asItem());
     }
 }

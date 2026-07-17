@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.ExperienceDroppingBlock;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.Enchantments;
@@ -34,6 +35,26 @@ public class MOdLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.VENOM_ORE, CustomOreDrops(ModBlocks.VENOM_ORE, ModItems.CHUNK_OF_VENOM, 1,3));
         addDrop(ModBlocks.RUBY_ORE, CustomOreDrops(ModBlocks.VENOM_ORE, ModItems.CHUNK_OF_VENOM, 2,4)); //temp
         addDrop(ModBlocks.SHADOW_ORE, ModBlocks.SHADOW_ORE);
+        addDrop(ModBlocks.EMBERSTONE_ORE, CustomOreDrops(ModBlocks.EMBERSTONE_ORE, ModItems.EMBERSTONE_INGOT, 1, 1));
+        addDrop(ModBlocks.FROSTSTEEL_ORE, ModBlocks.FROSTSTEEL_ORE);
+        addDrop(ModBlocks.FROSTSTEEL_PACKED_ICE_ORE, ModBlocks.FROSTSTEEL_PACKED_ICE_ORE);
+
+        addDrop(ModBlocks.FIRE_LOG);
+        addDrop(ModBlocks.FIRE_PLANKS);
+        addDrop(ModBlocks.FIRE_SAPLING);
+        addDrop(ModBlocks.FIRE_LEAVES, leavesDrops(ModBlocks.FIRE_LEAVES, ModBlocks.FIRE_SAPLING, SAPLING_DROP_CHANCE));
+
+        addDrop(ModBlocks.WASTELAND_GRASS_BLOCK, drops(ModBlocks.WASTELAND_GRASS_BLOCK, Blocks.DIRT));
+
+        addDrop(ModBlocks.FIRE_DOOR, doorDrops(ModBlocks.FIRE_DOOR));
+        addDrop(ModBlocks.FIRE_TRAPDOOR);
+
+        addDrop(ModBlocks.FIRE_STAIRS);
+        addDrop(ModBlocks.FIRE_SLAB, slabDrops(ModBlocks.FIRE_SLAB));
+        addDrop(ModBlocks.FIRE_FENCE);
+        addDrop(ModBlocks.FIRE_FENCE_GATE);
+        addDrop(ModBlocks.FIRE_PRESSURE_PLATE);
+        addDrop(ModBlocks.FIRE_BUTTON);
     }
 
     public LootTable.Builder CustomOreDrops(Block drop, Item item, float minDrops, float maxDrops) {

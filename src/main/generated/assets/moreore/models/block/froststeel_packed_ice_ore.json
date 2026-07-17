@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "moreore:block/froststeel_packed_ice_ore"
+  }
+}

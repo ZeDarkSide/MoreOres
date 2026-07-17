@@ -1,9 +1,12 @@
 // 1.21.4	-999999999-01-01T00:00:00	Ores glory/Tags for minecraft:item
-dcda43e00669831422fed3c940a3100b07506fc9 data/minecraft/tags/item/axes.json
-4f11ad9e1e372559151ed717789f9ec0930f00af data/minecraft/tags/item/hoes.json
-e60b89efd07b3525b96b615a33185b51fb59d184 data/minecraft/tags/item/pickaxes.json
-9f8d32f7705966d0513f5168667f94f9c0e0495c data/minecraft/tags/item/shovels.json
-e022f64ab1932bc4a6188410709fa10050d9d6a6 data/minecraft/tags/item/swords.json
+fc2aa873b1b29ed4ee297dc86573f31e43b28822 data/minecraft/tags/item/axes.json
+9759667549292427cccec071cc5b0db4596de06c data/minecraft/tags/item/hoes.json
+4b28c9b9b3021c1c3f10bb04ab8a03e0dd8d6f00 data/minecraft/tags/item/pickaxes.json
+6421319cab0def292663ab1ac7c58ffdfc2ae451 data/minecraft/tags/item/planks.json
+9306a56069a5a9be1df70d62d771eb3078f5f02a data/minecraft/tags/item/shovels.json
+e4d18f2d22a4f492442072778bb88107debe731b data/minecraft/tags/item/swords.json
+56d60b62ca9ffe826403b25f7f00460c31b370a5 data/moreore/tags/item/emberstone_repair.json
+58cbd7c6ab9634d9a5a87f07daeb572b38b17ade data/moreore/tags/item/emberstone_tools.json
 8b1c11ce3173c9cca98f70262af6cce1a9f34239 data/moreore/tags/item/shadow_tools.json
 2a7552da9cafff821bcf0490effb3a695af88fdd data/moreore/tags/item/transformable_items.json
 0041c7afa8c262e5c56dbca5148915379312c9e2 data/moreore/tags/item/venom_tools.json

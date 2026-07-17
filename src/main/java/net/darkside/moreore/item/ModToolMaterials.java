@@ -12,6 +12,9 @@ public class ModToolMaterials {
     public static ToolMaterial SHADOW_TOOLS = new ToolMaterial(ModTags.Blocks.WRONG_NEEDS_SHADOW_TOOLS,
             1650, 7.0F, 4.0F, 8, ModTags.Items.SHADOW_REPAIR);
 
+    public static ToolMaterial EMBERSTONE_TOOLS = new ToolMaterial(ModTags.Blocks.WRONG_NEEDS_EMBERSTONE_TOOLS,
+            1800, 8.0F, 3.0F, 10, ModTags.Items.EMBERSTONE_REPAIR);
+
 }
 
 

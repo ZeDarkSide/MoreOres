@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.15,
+  "group": "coal",
+  "ingredient": "moreore:fire_log",
+  "result": {
+    "id": "minecraft:charcoal"
+  }
+}

@@ -4,11 +4,28 @@
   "item.moreore.decayed_diamond": "Decayed Diamond",
   "item.moreore.shadow_scrap": "Shadow Scrap",
   "item.moreore.shadow_ingot": "Shadow Ingot",
+  "item.moreore.emberstone_ingot": "Emberstone Ingot",
 
   "item.moreore.unknow_block": "Unknow Block",
   "item.moreore.venom_ore": "Venom Ore",
   "item.moreore.ruby_ore": "Ruby Ore",
   "item.moreore.shadow_ore": "Shadow Ore",
+  "item.moreore.emberstone_ore": "Emberstone Ore",
+  "item.moreore.froststeel_ore": "Froststeel Ore",
+  "item.moreore.froststeel_packed_ice_ore": "Froststeel Packed Ice Ore",
+  "item.moreore.fire_log": "Fire Log",
+  "item.moreore.fire_planks": "Fire Planks",
+  "item.moreore.fire_door": "Fire Door",
+  "item.moreore.fire_trapdoor": "Fire Trapdoor",
+  "item.moreore.fire_stairs": "Fire Stairs",
+  "item.moreore.fire_slab": "Fire Slab",
+  "item.moreore.fire_fence": "Fire Fence",
+  "item.moreore.fire_fence_gate": "Fire Fence Gate",
+  "item.moreore.fire_pressure_plate": "Fire Pressure Plate",
+  "item.moreore.fire_button": "Fire Button",
+  "item.moreore.fire_leaves": "Fire Leaves",
+  "item.moreore.fire_sapling": "Fire Sapling",
+  "item.moreore.wasteland_grass_block": "Wasteland Grass Block",
 
 
   "item.moreore.venom_pickaxe": "Venom Pickaxe",
@@ -23,11 +40,26 @@
   "item.moreore.shadow_hoe": "Shadow Hoe",
   "item.moreore.shadow_sword": "Shadow Sword",
 
-
+  "item.moreore.emberstone_pickaxe": "Emberstone Pickaxe",
+  "item.moreore.emberstone_axe": "Emberstone Axe",
+  "item.moreore.emberstone_shovel": "Emberstone Shovel",
+  "item.moreore.emberstone_hoe": "Emberstone Hoe",
+  "item.moreore.emberstone_sword": "Emberstone Sword",
 
 
   "tooltip.moreore.venom_tool.line1": "Poisons on hit",
   "tooltip.moreore.venom_tool.line2": "Poison %s • %ss",
+
+  "tooltip.moreore.emberstone_tool.line1": "Ignites on hit",
+  "tooltip.moreore.emberstone_tool.line2": "Burns for %ss",
+  "tooltip.moreore.emberstone_autosmelt.line1": "Auto-smelts blocks it mines",
+  "tooltip.moreore.emberstone_autosmelt.line2": "Sneak while mining to skip",
+
+  "tooltip.moreore.shadow_tool.line1": "Empowered by darkness",
+  "tooltip.moreore.shadow_tool.line2": "+60% mining speed at night or in low light",
+
+  "tooltip.moreore.shadow_weapon.line1": "Empowered by darkness",
+  "tooltip.moreore.shadow_weapon.line2": "+30% attack damage at night or in low light",
 
 
   "itemgroup.moreore.unknow": "More ore",

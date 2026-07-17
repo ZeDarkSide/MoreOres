@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "moreore:block/fire_leaves_1"
+  }
+}

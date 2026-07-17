@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "moreore:block/fire_planks",
+    "side": "moreore:block/fire_planks",
+    "top": "moreore:block/fire_planks"
+  }
+}

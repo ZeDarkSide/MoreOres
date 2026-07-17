@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "ingredients": [
+    "moreore:fire_planks"
+  ],
+  "result": {
+    "count": 1,
+    "id": "moreore:fire_button"
+  }
+}

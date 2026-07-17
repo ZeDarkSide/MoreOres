@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "snowy=false": [
+      {"model": "moreore:block/wasteland_grass_block"},
+      {"model": "moreore:block/wasteland_grass_block", "y": 90},
+      {"model": "moreore:block/wasteland_grass_block", "y": 180},
+      {"model": "moreore:block/wasteland_grass_block", "y": 270}
+    ],
+    "snowy=true": {
+      "model": "moreore:block/wasteland_grass_block"
+    }
+  }
+}

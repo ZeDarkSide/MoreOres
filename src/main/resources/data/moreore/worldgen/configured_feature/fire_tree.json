@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:random_selector",
+  "config": {
+    "default": {
+      "feature": "moreore:fire_tree_standard",
+      "placement": []
+    },
+    "features": [
+      {
+        "chance": 0.4,
+        "feature": {
+          "feature": "moreore:fire_tree_wide",
+          "placement": []
+        }
+      }
+    ]
+  }
+}

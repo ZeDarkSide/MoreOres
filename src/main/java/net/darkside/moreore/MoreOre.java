@@ -4,7 +4,10 @@ import net.darkside.moreore.block.ModBlocks;
 import net.darkside.moreore.effect.ModEffect;
 import net.darkside.moreore.item.ItemGroups;
 import net.darkside.moreore.item.ModItems;
+import net.darkside.moreore.item.CustomTools.Emberstone.EmberstoneAutoSmelt;
 import net.darkside.moreore.util.ModLootTableModifiers;
+import net.darkside.moreore.world.ModFeatures;
+import net.darkside.moreore.world.ModWorldGen;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -26,6 +29,9 @@ public class MoreOre implements ModInitializer {
         ModBlocks.registerModBlocks();
         ModLootTableModifiers.register();
         ModEffect.registerEffects();
+        ModFeatures.registerFeatures();
+        ModWorldGen.registerOreGeneration();
+        EmberstoneAutoSmelt.register();
 	}
 
 

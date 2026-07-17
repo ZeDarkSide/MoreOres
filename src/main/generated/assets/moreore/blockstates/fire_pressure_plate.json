@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "moreore:block/fire_pressure_plate"
+    },
+    "powered=true": {
+      "model": "moreore:block/fire_pressure_plate_down"
+    }
+  }
+}

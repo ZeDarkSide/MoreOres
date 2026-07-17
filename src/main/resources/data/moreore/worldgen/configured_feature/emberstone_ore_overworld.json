@@ -1,0 +1,8 @@
+{
+  "type": "moreore:emberstone_ore",
+  "config": {
+    "size": 8,
+    "spread": 4,
+    "search_radius": 6
+  }
+}

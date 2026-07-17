@@ -1,0 +1,12 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "moreore:block/fire_leaves",
+    "tints": [
+      {
+        "type": "minecraft:constant",
+        "value": -2537457
+      }
+    ]
+  }
+}

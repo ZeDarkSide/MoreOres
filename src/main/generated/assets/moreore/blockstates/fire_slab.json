@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "moreore:block/fire_slab"
+    },
+    "type=double": {
+      "model": "moreore:block/fire_planks"
+    },
+    "type=top": {
+      "model": "moreore:block/fire_slab_top"
+    }
+  }
+}

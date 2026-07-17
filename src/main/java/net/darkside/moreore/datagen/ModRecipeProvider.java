@@ -144,6 +144,122 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
                 // </editor-fold>
 
+                // <editor-fold desc="Emberstone Crafting">
+                List<ItemConvertible> EMBERSTONE = List.of(ModBlocks.EMBERSTONE_ORE);
+                offerSmelting(EMBERSTONE, RecipeCategory.MISC, ModItems.EMBERSTONE_INGOT, 0.5f, 300, "emberstone_ores");
+
+                createShaped(RecipeCategory.MISC, ModItems.EMBERSTONE_PICKAXE)
+                        .pattern("RRR")
+                        .pattern(" S ")
+                        .pattern(" S ")
+                        .input('R', ModItems.EMBERSTONE_INGOT)
+                        .input('S', Items.STICK)
+                        .criterion(hasItem(ModItems.EMBERSTONE_INGOT), conditionsFromItem(ModItems.EMBERSTONE_INGOT))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModItems.EMBERSTONE_SWORD)
+                        .pattern(" R ")
+                        .pattern(" R ")
+                        .pattern(" S ")
+                        .input('R', ModItems.EMBERSTONE_INGOT)
+                        .input('S', Items.STICK)
+                        .criterion(hasItem(ModItems.EMBERSTONE_INGOT), conditionsFromItem(ModItems.EMBERSTONE_INGOT))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModItems.EMBERSTONE_HOE)
+                        .pattern("RR ")
+                        .pattern(" S ")
+                        .pattern(" S ")
+                        .input('R', ModItems.EMBERSTONE_INGOT)
+                        .input('S', Items.STICK)
+                        .criterion(hasItem(ModItems.EMBERSTONE_INGOT), conditionsFromItem(ModItems.EMBERSTONE_INGOT))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModItems.EMBERSTONE_AXE)
+                        .pattern(" RR")
+                        .pattern(" SR")
+                        .pattern(" S ")
+                        .input('R', ModItems.EMBERSTONE_INGOT)
+                        .input('S', Items.STICK)
+                        .criterion(hasItem(ModItems.EMBERSTONE_INGOT), conditionsFromItem(ModItems.EMBERSTONE_INGOT))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModItems.EMBERSTONE_SHOVEL)
+                        .pattern(" R ")
+                        .pattern(" S ")
+                        .pattern(" S ")
+                        .input('R', ModItems.EMBERSTONE_INGOT)
+                        .input('S', Items.STICK)
+                        .criterion(hasItem(ModItems.EMBERSTONE_INGOT), conditionsFromItem(ModItems.EMBERSTONE_INGOT))
+                        .offerTo(exporter);
+                // </editor-fold>
+
+                // <editor-fold desc="Fire Tree Crafting">
+                List<ItemConvertible> FIRE_LOGS = List.of(ModBlocks.FIRE_LOG);
+                offerSmelting(FIRE_LOGS, RecipeCategory.MISC, Items.CHARCOAL, 0.15f, 200, "coal");
+
+                createShapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FIRE_PLANKS, 4)
+                        .input(ModBlocks.FIRE_LOG)
+                        .criterion(hasItem(ModBlocks.FIRE_LOG), conditionsFromItem(ModBlocks.FIRE_LOG))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.FIRE_DOOR, 3)
+                        .pattern("##")
+                        .pattern("##")
+                        .pattern("##")
+                        .input('#', ModBlocks.FIRE_PLANKS)
+                        .criterion(hasItem(ModBlocks.FIRE_PLANKS), conditionsFromItem(ModBlocks.FIRE_PLANKS))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.FIRE_TRAPDOOR, 2)
+                        .pattern("###")
+                        .pattern("###")
+                        .input('#', ModBlocks.FIRE_PLANKS)
+                        .criterion(hasItem(ModBlocks.FIRE_PLANKS), conditionsFromItem(ModBlocks.FIRE_PLANKS))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FIRE_STAIRS, 4)
+                        .pattern("#  ")
+                        .pattern("## ")
+                        .pattern("###")
+                        .input('#', ModBlocks.FIRE_PLANKS)
+                        .criterion(hasItem(ModBlocks.FIRE_PLANKS), conditionsFromItem(ModBlocks.FIRE_PLANKS))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FIRE_SLAB, 6)
+                        .pattern("###")
+                        .input('#', ModBlocks.FIRE_PLANKS)
+                        .criterion(hasItem(ModBlocks.FIRE_PLANKS), conditionsFromItem(ModBlocks.FIRE_PLANKS))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.DECORATIONS, ModBlocks.FIRE_FENCE, 3)
+                        .pattern("W#W")
+                        .pattern("W#W")
+                        .input('W', ModBlocks.FIRE_PLANKS)
+                        .input('#', Items.STICK)
+                        .criterion(hasItem(ModBlocks.FIRE_PLANKS), conditionsFromItem(ModBlocks.FIRE_PLANKS))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.FIRE_FENCE_GATE)
+                        .pattern("#W#")
+                        .pattern("#W#")
+                        .input('W', ModBlocks.FIRE_PLANKS)
+                        .input('#', Items.STICK)
+                        .criterion(hasItem(ModBlocks.FIRE_PLANKS), conditionsFromItem(ModBlocks.FIRE_PLANKS))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.REDSTONE, ModBlocks.FIRE_PRESSURE_PLATE)
+                        .pattern("##")
+                        .input('#', ModBlocks.FIRE_PLANKS)
+                        .criterion(hasItem(ModBlocks.FIRE_PLANKS), conditionsFromItem(ModBlocks.FIRE_PLANKS))
+                        .offerTo(exporter);
+
+                createShapeless(RecipeCategory.REDSTONE, ModBlocks.FIRE_BUTTON)
+                        .input(ModBlocks.FIRE_PLANKS)
+                        .criterion(hasItem(ModBlocks.FIRE_PLANKS), conditionsFromItem(ModBlocks.FIRE_PLANKS))
+                        .offerTo(exporter);
+                // </editor-fold>
+
                 // <editor-fold desc="Copy paste stuff>
                /* createShaped(RecipeCategory.MISC, ModBlocks.RAW_PINK_GARNET_BLOCK)
                         .pattern("RRR")

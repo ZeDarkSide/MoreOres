@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_emberstone_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "moreore:emberstone_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "moreore:emberstone_hoe"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_emberstone_ingot"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "moreore:emberstone_hoe"
+    ]
+  }
+}
