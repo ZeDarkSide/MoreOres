@@ -11,7 +11,7 @@ public class MoreOreClient implements ClientModInitializer {
 
     private static final int FIRE_LEAVES_BLOCK_TINT = 0xD9480F;
 
-    private static final int WASTELAND_GRASS_FALLBACK_TINT = 0x34382F;
+    private static final int WASTELAND_GRASS_FALLBACK_TINT = 0x6B8E23;
 
     @Override
     public void onInitializeClient(){
@@ -23,6 +23,14 @@ public class MoreOreClient implements ClientModInitializer {
                 (state, world, pos, tintIndex) -> world != null && pos != null
                         ? BiomeColors.getGrassColor(world, pos)
                         : WASTELAND_GRASS_FALLBACK_TINT,
+                ModBlocks.WASTELAND_GRASS_BLOCK);
+
+        ColorProviderRegistry.ITEM.register(
+                (stack, tintIndex) -> FIRE_LEAVES_BLOCK_TINT,
+                ModBlocks.FIRE_LEAVES);
+
+        ColorProviderRegistry.ITEM.register(
+                (stack, tintIndex) -> WASTELAND_GRASS_FALLBACK_TINT,
                 ModBlocks.WASTELAND_GRASS_BLOCK);
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.FIRE_LEAVES, RenderLayer.getCutoutMipped());
